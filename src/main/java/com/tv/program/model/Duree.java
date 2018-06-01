@@ -1,13 +1,23 @@
 package com.tv.program.model;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class Duree {
+    private final static Map<String, TimeUnit> TIME_UNIT_MAP;
+
+    static {
+        TIME_UNIT_MAP = new HashMap<>();
+        TIME_UNIT_MAP.put("minutes", TimeUnit.MINUTES);
+        TIME_UNIT_MAP.put("hours", TimeUnit.HOURS);
+    }
+
     private TimeUnit unit;
     private long value;
 
-    public Duree(TimeUnit unit, long value) {
-        this.unit = unit;
+    public Duree(String unit, long value) {
+        this.unit = TIME_UNIT_MAP.get(unit);
         this.value = value;
     }
 

@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tv SYSTEM "xmltv.dtd">
+
+<tv source-info-url="https://api.telerama.fr" source-data-url="https://api.telerama.fr" generator-info-name="XMLTV France" generator-info-url="http://www.xmltv.fr">
+<programme start="20180430062500 +0200" stop="20180430071000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Cosmos : une odyssée à travers l'univers</title>
+    <sub-title>Les immortels</sub-title>
+    <desc lang="fr">Enquête sur le futur et les messages laissés par l'homme via son ADN : zoom sur une vision pleine d'espoir du futur, proposée par l'astrophysicien Neil deGrasse.</desc>
+    <credits>
+      <director>Brannon Braga</director>
+      <director>Bill Pope</director>
+    </credits>
+    <date>2013</date>
+    <category lang="fr">documentaire : sciences et technique</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_504135.jpg" />
+    <country>américain</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180430084000 +0200" stop="20180430092500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Mission Amazonie</title>
+    <sub-title>En terrain inconnu</sub-title>
+    <desc lang="fr">Pour la première fois, une équipe de biologistes part explorer les zones montagneuses du parc national Serra da Mocidade, au fin fond de l'Amazonie brésilienne.</desc>
+    <credits>
+      <director>Mauricio Dias</director>
+    </credits>
+    <category lang="fr">documentaire : animalier</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_819782.jpg" />
+    <country>germano-brésilien</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180430111000 +0200" stop="20180430115500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Tapis persans d'Ispahan</title>
+    <sub-title>Le retour d'une vieille tradition</sub-title>
+    <desc lang="fr">A Ispahan, Shanty Ghaffarian vend des tapis persans finement ouvragés. Mais le contexte est difficile, et le jeune homme n'a que peu de temps pour sa vie personnelle.</desc>
+    <credits>
+      <director>Sebastian Kentner</director>
+    </credits>
+    <category lang="fr">documentaire : société</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_822091.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180430133000 +0200" stop="20180430154000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>L'aventurier du Rio Grande</title>
+    <desc lang="fr">Après avoir tué l'assassin de son père, Martin Brady s'est réfugié au Mexique. Devenu le garde du corps du politicien Cipriano Castro, il est envoyé au Texas, l'Etat qu'il a dû fuir, afin d'y chercher un convoi d'armes. En chemin, il se casse la jambe et se retrouve ainsi bloqué à Puerto, un village à proximité de la frontière. Le fourgon prend la route sans lui, subit un détournement. De son côté, Martin, profitant de son repos forcé, contacte le capitaine de la milice locale, un vieil ami de son père, qui lui certifie que son cas peut s'arranger. Mais à peine rétabli, Martin, pour venger l'un de ses amis qui vient de mourir, commet à nouveau un crime...
+
+Critique : | Genre : western sentimental.
+
+A l’ouest, il y a toujours des pépites à redécouvrir. Dans L’Aventurier du Rio Grande (1959), de Robert Parrish, pas de poursuite infernale ni d’héroïsme. Le cinéaste a toujours été fier de ce western aux teintes mélancoliques où un porte-flingue à la jambe cassée (on voit Robert Mitchum tomber de cheval !), partagé entre deux rives et deux vies, connaît une renaissance morale. Le rôle fut refusé par Henry Fonda et Gregory Peck. Tant mieux, Robert Mitchum, qui aima d’emblée ce personnage d’individualiste un peu las, est étonnant : tendre, presque sentimental. Ce qui ne l’empêcha pas de prendre de sérieuses cuites sur le tournage avec les potes qu’il avait engagés. Car il était aussi coproducteur…</desc>
+    <credits>
+      <guest>Robert Mitchum (Martin Brady)</guest>
+      <guest>Julie London (Ellen Colton)</guest>
+      <guest>Gary Merrill (le commandant Colton)</guest>
+      <guest>Pedro Armendáriz (Cipriano Castro)</guest>
+      <guest>Albert Dekker (le capitaine Rucker)</guest>
+      <guest>Jack Oakie (Travis Hyte)</guest>
+      <guest>Charles McGraw (Herbert J Stovall)</guest>
+      <guest>Anthony Caruso (Santiago Santos)</guest>
+      <guest>Robert Parrish (Réalisateur/Metteur en Scène)</guest>
+      <guest>Alex North (Musique)</guest>
+      <guest>Robert Ardrey (Scénariste)</guest>
+      <guest>Tom Lea</guest>
+    </credits>
+    <date>1959</date>
+    <category lang="fr">film : western</category>
+    <length units="minutes">130</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_emi_820183.jpg" />
+    <country>américain</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <audio>
+      <stereo>bilingual</stereo>
+    </audio>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+    <star-rating>
+      <value>3/5</value>
+    </star-rating>
+  </programme>
+  <programme start="20180430225000 +0200" stop="20180501005000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>L'étreinte du serpent</title>
+    <desc lang="fr">En guidant deux scientifiques, c’est son propre peuple que recherche un chaman d’Amazonie. Une rêverie luxuriante sur les traces de Fitzcarraldo.
+
+Critique : | Genre : sur les traces de Fitzcarraldo.
+
+Dès le premier plan, Karamakate, chaman amazonien, ermite tourmenté, s’empare du film. Il en est le guide, à travers l’espace et le temps. C’est lui qui conduit vers l’inconnu, à des décennies de distance, deux scientifiques occidentaux venus le solliciter : un ethnologue allemand et un botaniste américain. Leurs voyages dans les méandres de l’Amazone se répètent, se ­répondent et se confondent dans une même quête obsédante d’une fleur ­mythique, curative et hallucinogène…
+
+De son troisième long métrage, le Colombien Ciro Guerra fait une immense ­rêverie aussi énigmatique, dense et luxuriante que cette jungle dans laquelle il est le ­premier, depuis une trentaine d’années, à poser sa caméra. L’Etreinte du ­serpent est un film d’aventures, dont le parcours ­sinueux, contemplatif et hypnotique glisse vers les confins de la folie, dans une Amazonie hantée. Ici, la violence des ­colons exploitant le caoutchouc ; plus loin, une mission catholique où des ­orphelins sont fouettés au cœur de la nuit ; ailleurs, un messie dément qui s’offre à ses adeptes dans une eucharistie cannibale… Tout ce périple, entre violence historique et vertige spirituel, semble suivre les traces de Werner Her­zog (Aguirre, la colère de Dieu ; Fitzcar­raldo). Et de Joseph Conrad, dans son roman Au cœur des ténèbres.</desc>
+    <credits>
+      <guest>Jacques Toulemonde Vidal</guest>
+      <guest>Alejandro Franco</guest>
+      <guest>David Gallego</guest>
+      <guest>Antonio Bolivar (Karamakate)</guest>
+      <guest>Brionne Davis (Evan)</guest>
+      <guest>Nilbio Torres (Karamakate jeune)</guest>
+      <guest>Jan Bijvoet (Theo)</guest>
+      <guest>Yauenkü Migue (Manduca)</guest>
+      <guest>Nicolás Cancino (Anizetto)</guest>
+      <guest>Luigi Sciamanna (Gaspar)</guest>
+      <guest>Nascuy Linares</guest>
+      <guest>Ciro Guerra</guest>
+      <guest>Ciro Guerra</guest>
+    </credits>
+    <date>2015</date>
+    <category lang="fr">film d'aventures</category>
+    <length units="hours">2</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/7fb07fad-8e15-4798-a8f8-6c2157a20151_2.jpg" />
+    <country>Colombie</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <subtitles type="onscreen">
+      <language>fr</language>
+    </subtitles>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+    <star-rating>
+      <value>4/5</value>
+    </star-rating>
+  </programme>
+  <programme start="20180501015000 +0200" stop="20180501032000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Fraktus, le dernier chapitre de l'histoire de la musique</title>
+    <desc lang="fr">Dans les années 80, le trio allemand Fraktus triomphait. La critique les encensait comme les inventeurs de la musique techno. Mais après une dispute, ses membres se sont séparés. Que sont-ils devenus ? Roger Dettner, producteur miteux, part sur leurs traces pour les convaincre de faire leur grand retour...</desc>
+    <credits>
+      <director>Lars Jessen</director>
+      <actor>Devid Striesow (Roger Dettner)</actor>
+      <actor>Heinz Strunk (Torsten Bage)</actor>
+      <actor>Rocko Schamoni (Dickie Schubert)</actor>
+      <actor>Jacques Palminger (Bernd Wand)</actor>
+      <actor>Piet Fuchs (Winnie)</actor>
+      <actor>Marcus Engelhardt (Dickie Schubert en 1983)</actor>
+      <actor>Kenny-David Baehr (Bernd Wand 1983)</actor>
+      <actor>Rafael Weitzel (Torsten Bage en 1983)</actor>
+      <writer>Studio Braun</writer>
+      <writer>Sebastian Schultz</writer>
+      <writer>Lars Jessen</writer>
+      <writer>Ingo Haeb</writer>
+      <composer>Carsten Meyer</composer>
+    </credits>
+    <category lang="fr">téléfilm humoristique</category>
+    <length units="minutes">90</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_GEP_547038.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501050000 +0200" stop="20180501055000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>La Folle Journée de Nantes 2017</title>
+    <sub-title>Musiques de danses</sub-title>
+    <desc lang="fr">Dédiée au rythme des peuples, la 23e édition de la Folle Journée s'achève en feu d'artifice avec le traditionnel concert de clôture, magnifié par la violoniste russe Alexandra Conunova.</desc>
+    <credits>
+      <actor>Alexandra Conunova (violon)</actor>
+      <guest>Andris Poga</guest>
+    </credits>
+    <category lang="fr">classique</category>
+    <length units="minutes">50</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_GEP_547103.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501055000 +0200" stop="20180501061500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>X:enius</title>
+    <sub-title>Batteries et accumulateurs</sub-title>
+    <desc lang="fr">Les batteries et les accumulateurs des voitures électriques sont principalement produits en Asie. Pour y remédier, l'Allemagne conçoit déjà les batteries du futur, mais souhaite à terme extraire et recycler sur place du lithium. C'est notamment le cas à l'Institut des procédés industriels de l'université technique de Brunswick.</desc>
+    <credits>
+      <presenter>Emilie Langlade</presenter>
+      <presenter>Adrian Pflug</presenter>
+    </credits>
+    <category lang="fr">magazine de découvertes</category>
+    <length units="minutes">25</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_731835.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501061500 +0200" stop="20180501071000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Bhoutan, le royaume du bonheur</title>
+    <desc lang="fr">Depuis 1972, le Bhoutan s'efforce d'améliorer son indice BNB - bonheur national brut : il mise ainsi sur la lenteur plutôt que sur la croissance.</desc>
+    <credits>
+      <director>Min Yong-Eung</director>
+    </credits>
+    <date>2011</date>
+    <category lang="fr">documentaire : découvertes</category>
+    <length units="minutes">55</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_385683.jpg" />
+    <country>sud-coréen</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501071000 +0200" stop="20180501071500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Arte journal junior</title>
+    <credits>
+      <presenter>Dorothee Haffner</presenter>
+      <presenter>Magali Kreuzer</presenter>
+      <presenter>Carolyn Höfchen</presenter>
+      <presenter>Frank Rauschendorf</presenter>
+    </credits>
+    <category lang="fr">magazine jeunesse</category>
+    <length units="minutes">5</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_731843.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501071500 +0200" stop="20180501080000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>360°-GEO</title>
+    <sub-title>La forêt secrète de la Spree</sub-title>
+    <desc lang="fr">A une heure de route de Berlin, la région du Spreewald est un petit paradis de verdure, traversé par d'innombrables canaux et bras de rivières.</desc>
+    <credits>
+      <director>Maja Dielhenn</director>
+    </credits>
+    <date>2015</date>
+    <category lang="fr">documentaire : découvertes</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_649678.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501080000 +0200" stop="20180501084000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Invitation au voyage</title>
+    <desc lang="fr">Au sommaire:</desc>
+    <credits>
+      <presenter>Linda Lorin</presenter>
+    </credits>
+    <category lang="fr">magazine du tourisme</category>
+    <length units="minutes">40</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_GEP_785678.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501084000 +0200" stop="20180501092500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Mission Amazonie</title>
+    <sub-title>Sur la piste de nouvelles espèces</sub-title>
+    <desc lang="fr">Une équipe de scientifiques explore la Serra de Mocidade, au coeur de l'Amazonie brésilienne, et découvre de nombreuses espèces encores inconnues.</desc>
+    <credits>
+      <director>Mauricio Dias</director>
+    </credits>
+    <category lang="fr">documentaire : animalier</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_819783.jpg" />
+    <country>germano-brésilien</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501092500 +0200" stop="20180501101000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Lions de Namibie</title>
+    <sub-title>Les rois du désert</sub-title>
+    <desc lang="fr">En bordure du désert de Namibie, zoom sur une meute de huit lions, une «reine» de 17 ans, ses deux filles et leurs cinq lionceaux, une espèce menacée.</desc>
+    <credits>
+      <director>Lianne Steenkamp</director>
+      <director>Will Steenkamp</director>
+    </credits>
+    <category lang="fr">documentaire : animalier</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_627132.jpg" />
+    <country>autrichien</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501101000 +0200" stop="20180501111000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Lions de Namibie</title>
+    <sub-title>Un nouveau départ</sub-title>
+    <desc lang="fr">Dans le désert de Namibie, cinq jeunes lions, en quête de femelles avec lesquelles ils pourront fonder de nouveaux clans, se retrouvent en danger au contact des humains.</desc>
+    <credits>
+      <director>Lianne Steenkamp</director>
+      <director>Will Steenkamp</director>
+    </credits>
+    <category lang="fr">documentaire : animalier</category>
+    <length units="hours">1</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_627132.jpg" />
+    <country>austro-français</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501111000 +0200" stop="20180501115500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Contes des mers</title>
+    <sub-title>L'île tropicale de Hainan, paradis des touristes chinois</sub-title>
+    <desc lang="fr">Perdue au milieu de la mer de Chine méridionale, Hainan était autrefois une île presque vierge : aujourd'hui, treize millions de vacanciers s'y pressent chaque année.</desc>
+    <credits>
+      <director>Sven Jaax</director>
+    </credits>
+    <date>2012</date>
+    <category lang="fr">documentaire : découvertes</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_515923.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501115500 +0200" stop="20180501125000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Les routes mythiques de l'Europe</title>
+    <sub-title>La Via Cassia en Italie</sub-title>
+    <desc lang="fr">Cap sur l'Italie, entre Rome et Florence ; le long de la Via Cassia, ancien axe impérial, se laissent découvrir quelques-unes des splendeurs de la Botte.</desc>
+    <credits>
+      <director>Jeremy JP Fekete</director>
+    </credits>
+    <date>2015</date>
+    <category lang="fr">documentaire : découvertes</category>
+    <length units="minutes">55</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_575729.jpg" />
+    <country>germano-français</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501125000 +0200" stop="20180501125500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Arte journal</title>
+    <desc lang="fr">L'actualité de la mi-journée en voix off.</desc>
+    <category lang="fr">journal</category>
+    <length units="minutes">5</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_561204.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501125500 +0200" stop="20180501130000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Agenda coup de coeur</title>
+    <desc lang="fr">Les coups de coeur culture de la chaîne.</desc>
+    <category lang="fr">magazine culturel</category>
+    <length units="minutes">5</length>
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501130000 +0200" stop="20180501133500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Arte regards</title>
+    <sub-title>Tout quitter pour vivre sur l'île de La Gomera</sub-title>
+    <desc lang="fr">En prise avec un thème d'actualité, des reportages vont à la rencontre de citoyens européens et proposent une plongée inédite dans leurs réalités quotidiennes.</desc>
+    <category lang="fr">documentaire : société</category>
+    <length units="minutes">35</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_747413.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501133500 +0200" stop="20180501163000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>L'homme qui murmurait à l'oreille des chevaux</title>
+    <desc lang="fr">Un dresseur tente d'apprivoiser une jeune fille et son cheval. Redford renoue avec le cinéma de jadis, où les sentiments fragiles avaient le temps et de grands espaces pour vibrer.
+
+Critique : Un cheval blessé. Une adolescente. Un guérisseur sage. L’étonnant, c’est que Robert Redford ait métamorphosé ce roman-photo vaguement new age en drame au lyrisme tranquille, à la manière d’un John Ford, par exemple, avec son sens de l’espace et la beauté des sentiments. De toute évidence, le personnage principal, c’est Annie, la mère, qui va chercher ce mec bizarre qui a la réputation de « murmurer à l’oreille des chevaux » pour mieux les guérir. Parce que Annie est interprétée par Kristin Scott Thomas et le guérisseur par Robert Redford, on devine bien que ces deux-là seront attirés l’un par l’autre. Mais la naissance du sentiment amoureux entre cette New-Yorkaise snob et ce solitaire un peu triste est filmée avec sensibilité et drôlerie. C’est cette fragilité qui séduit. Cette capacité à saisir au vol, entre deux moments contemplatifs, des instants apparemment insignifiants mais pourtant intenses.</desc>
+    <credits>
+      <guest>Robert Redford</guest>
+      <guest>Robert Redford (Tom Booker)</guest>
+      <guest>Kristin Scott Thomas (Annie MacLean)</guest>
+      <guest>Sam Neill (Robert MacLean)</guest>
+      <guest>Dianne Wiest (Diane Booker)</guest>
+      <guest>Scarlett Johansson (Grace MacLean)</guest>
+      <guest>Chris Cooper (Frank Booker)</guest>
+      <guest>Cherry Jones (Liz Hammond)</guest>
+      <guest>Ty Hillman (Joe Booker)</guest>
+      <guest>Thomas Newman</guest>
+      <guest>Eric Roth</guest>
+      <guest>Richard LaGravenese</guest>
+      <guest>Nicholas Evans</guest>
+      <guest>Robert Richardson</guest>
+    </credits>
+    <date>1998</date>
+    <category lang="fr">film : drame</category>
+    <length units="minutes">175</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_emi_35430.jpg" />
+    <country>américain</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <audio>
+      <stereo>bilingual</stereo>
+    </audio>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+    <star-rating>
+      <value>4/5</value>
+    </star-rating>
+  </programme>
+  <programme start="20180501163000 +0200" stop="20180501171000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Invitation au voyage</title>
+    <desc lang="fr">Au sommaire :</desc>
+    <credits>
+      <presenter>Linda Lorin</presenter>
+    </credits>
+    <category lang="fr">magazine du tourisme</category>
+    <length units="minutes">40</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_GEP_785678.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501171000 +0200" stop="20180501173500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>X:enius</title>
+    <sub-title>Sauvetage en mer : un vrai défi !</sub-title>
+    <desc lang="fr">A Martigues, près de Marseille, les présentateurs participent à une formation de sauvetage en mer. Quels sont les risques auxquels les sauveteurs s'exposent ? Malgré les progrès techniques, les naufrages restent d'actualité. Quelles sont leurs causes ?</desc>
+    <credits>
+      <presenter>Carolin Matzko</presenter>
+      <presenter>Gunnar Mergner</presenter>
+    </credits>
+    <category lang="fr">magazine de découvertes</category>
+    <length units="minutes">25</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_731835.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501173500 +0200" stop="20180501180500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Jardins d'ici et d'ailleurs</title>
+    <sub-title>La Ninfa (Italie)</sub-title>
+    <desc lang="fr">Trois générations de femmes ont créé un jardin exceptionnel, savant mélange de couleurs et de textures, autour des ruines de la cité antique de Ninfa, en Italie.</desc>
+    <credits>
+      <director>Aloïs-Marie Le Noan</director>
+    </credits>
+    <date>2015</date>
+    <category lang="fr">documentaire : voyage</category>
+    <length units="minutes">30</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_741191.jpg" />
+    <country>français</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501180500 +0200" stop="20180501190000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Joutes dans la savane</title>
+    <desc lang="fr">Une campagne de défense de l'environnement tente de convaincre les Massaïs de remplacer un rite d'initiation - tuer un lion- par des épreuves d'athlétisme.</desc>
+    <credits>
+      <director>Dereck Joubert</director>
+    </credits>
+    <category lang="fr">documentaire : société</category>
+    <length units="minutes">55</length>
+    <country>autrichien</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <premiere />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501190000 +0200" stop="20180501194500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Au fil de l'eau</title>
+    <sub-title>Le Neckar</sub-title>
+    <desc lang="fr">Rottweil, Tübingen et Heidelberg sont baignées par le Neckar, une autre voie romantique d'Allemagne, qui s'ourle de vigne sur les collines qui surplombent Stuttgart.</desc>
+    <credits>
+      <director>Thomas Radler</director>
+    </credits>
+    <date>2014</date>
+    <category lang="fr">documentaire : découvertes</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_581035.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501194500 +0200" stop="20180501200500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Arte journal</title>
+    <desc lang="fr">L'actualité internationale, décortiquée par une rédaction franco-allemande.</desc>
+    <category lang="fr">journal</category>
+    <length units="minutes">20</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_561204.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501200500 +0200" stop="20180501205000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>28 minutes</title>
+    <sub-title>Best of club</sub-title>
+    <desc lang="fr">Retour sur les débats qui ont marqué l'émission depuis le début de l'année : la guerre en Syrie et l'impuissante de l'Occident, les colères sociales, le duel de Renaud Dély qui opposait Laura Smet à Laeticia Hallyday, la chronique de Nadia Daam consacrée au test « Oui-oui », et l'histoire de Claude Askolovitch sur les bonnes soeurs.</desc>
+    <credits>
+      <presenter>Elisabeth Quin</presenter>
+      <presenter>Renaud Dély</presenter>
+      <presenter>Nadia Daam</presenter>
+      <presenter>Marc-Antoine de Poret</presenter>
+      <presenter>Claude Askolovitch</presenter>
+      <presenter>Xavier Mauduit</presenter>
+      <presenter>Sandrine Le Calvez</presenter>
+      <presenter>François Saltiel</presenter>
+      <presenter>Thibaut Nolte</presenter>
+      <presenter>Eric Chol</presenter>
+      <presenter>Vincent Trémolet de Villers</presenter>
+      <presenter>Benoît Forgeard</presenter>
+    </credits>
+    <category lang="fr">magazine d'actualité</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_656212.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501205000 +0200" stop="20180501214000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Les routes de l'esclavage</title>
+    <sub-title>476-1375 : Au-delà du désert</sub-title>
+    <desc lang="fr">Saison : 1 - Après 476, les peuples wisigoths, ostrogoths, berbères, slaves, byzantins, nubiens et arabes se disputent les ruines de l'empire romain. Tous pratiquent alors l'asservissement. Mais au VIIe siècle émerge un empire arabe. Au rythme de ses conquêtes se tisse, entre Afrique et Moyen-Orient, un immense réseau de traite d'esclaves, dont la demande ne cesse de croître et qui converge vers Bagdad. Après la révolte des Zanj (IXe siècle), qui s'achève dans un bain de sang, le trafic se redéploie vers l'intérieur du continent. Deux grandes cités commerciales et marchés aux esclaves s'imposent : Le Caire au nord, et Tombouctou au sud, place forte de l'empire du Mali. Au fil des siècles, les populations subsahariennes deviennent la principale «matière première» de ce trafic.
+
+Critique : Une exceptionnelle série qui s'attache à décrypter le phénomène de la traite et de l’esclavage. Les regards croisés d’historiens du monde entier attestent les liens indissociables entre l’asservissement de millions d’Africains et le monde contemporain.</desc>
+    <credits>
+      <director>Juan Gelas</director>
+      <director>Fanny Glissant</director>
+      <director>Daniel Cattier</director>
+    </credits>
+    <category lang="fr">documentaire : histoire</category>
+    <length units="minutes">50</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_819761.jpg" />
+    <country>français</country>
+    <episode-num system="xmltv_ns">0..</episode-num>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <premiere />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501214000 +0200" stop="20180501223500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Les routes de l'esclavage</title>
+    <sub-title>1375-1620 : Pour tout l'or du monde</sub-title>
+    <desc lang="fr">Saison : 1 - A l'issue des croisades, l'Europe à son tour se tourne vers l'Afrique, source d'immenses richesses. Les navigateurs portugais, qui convoitent l'or du continent, entreprennent en pionniers de le conquérir et reviennent avec des milliers d'esclaves du royaume Kongo, qu'ils vendent en Europe du Sud avec la bénédiction de l'Eglise. Sur l'île de São Tomé, sorte de «laboratoire» de l'esclavage au large du Gabon, ils passent du négoce de captifs à la production d'esclaves au service d'une plantation sucrière et mettent en place la première société esclavagiste. A partir de 1516, la découverte du Brésil ouvre de nouvelles routes de traite, inaugurant le commerce triangulaire entre les continents – or, esclaves, sucre. Bientôt apparaissent les premières communautés armées de fugitifs, les «mocambos».
+
+Critique : Dès le XVe siècle, les immenses empires coloniaux constitués par les Européens poussent ces derniers à se tourner vers l'Afrique pour se fournir en esclaves : le commerce triangulaire est né.</desc>
+    <credits>
+      <director>Daniel Cattier</director>
+      <director>Juan Gelas</director>
+      <director>Philippe Lacôte</director>
+      <director>Olivier Patté</director>
+    </credits>
+    <category lang="fr">documentaire : histoire</category>
+    <length units="minutes">55</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_821171.jpg" />
+    <country>français</country>
+    <episode-num system="xmltv_ns">0..</episode-num>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <premiere />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501223500 +0200" stop="20180501233000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Les routes de l'esclavage</title>
+    <sub-title>1620-1789 : Du sucre à la révolte</sub-title>
+    <desc lang="fr">Saison : 1 - Imitant le modèle portugais, l'Espagne, la Hollande, la France et l'Angleterre, en quête de colossaux profits, se disputent les Caraïbes pour y cultiver la canne. L'Atlantique devient le champ de bataille de la guerre du sucre, laquelle va multiplier les routes de l'esclavage à grand renfort d'investissements, avec la complicité des banques et des compagnies d'assurances. Alors que les méthodes s'industrialisent et que la terreur s'intensifie – razzias, tortures et décapitations publiques pour prévenir toute rébellion –, près de sept millions d'Africains sont entraînés dans la tourmente, vendus par des marchands locaux à des flibustiers et armateurs négriers, tandis que s'élèvent en Europe les premières voix contre la barbarie de la traite, socle du capitalisme émergent.
+
+Critique : Asservir est une pratique aussi vieille que l’humanité… le documentaire, émouvant mais rigoureux, retrace la pratique de la traite d’êtres humains à travers les siècles. Un travail pédagogique essentiel pour mieux comprendre nos sociétés contemporaines.</desc>
+    <credits>
+      <director>Daniel Cattier</director>
+      <director>Juan Gelas</director>
+      <director>Philippe Lacôte</director>
+      <director>Olivier Patté</director>
+    </credits>
+    <category lang="fr">documentaire : histoire</category>
+    <length units="minutes">55</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_821173.jpg" />
+    <country>français</country>
+    <episode-num system="xmltv_ns">0..</episode-num>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <premiere />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180501233000 +0200" stop="20180502002500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Les routes de l'esclavage</title>
+    <sub-title>1789-1888 : Les nouvelles frontières de l’esclavage</sub-title>
+    <desc lang="fr">Saison : 1 - A Londres, Paris et Washington, le courant abolitionniste gagne du terrain. Après la révolte des esclaves de Saint-Domingue, la Grande-Bretagne abolit la traite transatlantique en 1807. Mais l'Europe, en pleine révolution industrielle, ne peut pas se passer des esclaves. Pour satisfaire son besoin de matières premières, elle repousse les frontières de l'esclavage, fermant les yeux sur les nouvelles formes d'exploitation de l'homme au Brésil et aux Etats-Unis. A l'heure où la traite légale est enfin interdite, la déportation des captifs africains va exploser, plus importante que jamais. En cinquante ans, près de 2,5 millions de personnes sont ainsi déportées.
+
+Critique : Asservir est une pratique aussi vieille que l’humanité. Les premiers empires grec, romain, arabes du pourtour méditerranéen capturaient les peuples slaves pour accomplir les tâches jugées indignes. Peu à peu, les empires arabo-musulmans se tournent vers l’Afrique. Ils cherchent des esclaves au-delà des terres islamisées. Tombouctou devient alors la plaque tournante de la fourniture de captifs. A partir du xive siècle, et de l’exploration par les Portugais du continent en quête d’or, le piège se referme sur l’Afrique. Elle devient l’eldorado où les Européens puisent la main-d’œuvre nécessaire à l’exploitation des plantations sucrières implantées aux Antilles et aux Amériques. Banque et assurance se développent pour prêter l’argent nécessaire aux expéditions négrières et assurer les cargaisons. L’investissement est très rentable. Plus de vingt millions d’Africains ont ainsi été déportés et vendus.
+
+Selon un déroulement chronologique qui couvre mille deux cents ans d’histoire mondiale, les quatre parties détaillent avec minutie les mécanismes et les ressorts qui construisent peu à peu ce système. S’appuyant sur des récits d’époque et le regard d’historiens, les réalisateurs font émerger une réalité géographique et économique affranchie de tout point de vue moral.
+
+D’émouvantes séquences d’animation donnent forme aux ­récits des capitaines négriers, des assureurs, des esclaves. On se retrouve à bord des navires, au cœur de la violence infligée aux déportés, dans une réunion entre associés agacés par les faibles profits réalisés sur un lot d’esclaves. Un travail pédagogique dense, précis et essentiel qui offre des clés pour comprendre les enjeux contemporains de cet héritage commun. Ce passé violent n’est pas sans rapport avec les tensions que connaissent les sociétés européenne, américaine, africaine, antillaise aujourd’hui. Car la traite et l’esclavage ont construit un imaginaire dévastateur, puissant et durable. La notion de race et de racisme découle des rapports de domination d’alors.</desc>
+    <credits>
+      <director>Daniel Cattier</director>
+      <director>Juan Gelas</director>
+      <director>Philippe Lacôte</director>
+      <director>Olivier Patté</director>
+    </credits>
+    <category lang="fr">documentaire : histoire</category>
+    <length units="minutes">55</length>
+    <icon src="http://television.telerama.fr/" />
+    <country>français</country>
+    <episode-num system="xmltv_ns">0..</episode-num>
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <premiere />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+    <star-rating>
+      <value>5/5</value>
+    </star-rating>
+  </programme>
+  <programme start="20180502002500 +0200" stop="20180502012500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Quand la caravane reste</title>
+    <desc lang="fr">Un petit camping de Rhône-Alpes, comme il en existe des centaines : quelques cabanons, des caravanes, les apéritifs, les méchouis et les soirées dansantes. Retraités et jeunes actifs s'y côtoient, échangent autour d'une pétanque, d'un café servi chaud au coin bistrot du «village». Collectivement, c'est un lieu de villégiature sans histoire. Mais à mieux y regarder, chacun est arrivé ici pour une raison précise. Certains par choix, d'autres forcés par la crise du travail et du logement. Avec pudeur, la réalisatrice Stéphane Mercurio filme le quotidien de quelques habitants et fait émerger leurs trajectoires personnelles, toujours émouvantes.
+
+Critique : « Avant, c'était les vacances. Maintenant, c'est la maison de tous les jours... », dit l'homme entre deux âges, à la recherche d'un emploi, en faisant visiter sa caravane. Synonyme de week-ends et de congés d'été sans contraintes, le camping est devenu pour certains un lieu de vie permanent. Parce qu'on n'a « pas trop le choix », qu'on veut se poser un peu après un accident de la vie ou qu'on aime ça... Pour ce jeune couple attachant qui a beaucoup voyagé à l'étranger, c'est une sorte de sas entre une existence nomade et une stabilité qu'il recherche tout en s'en méfiant un peu. D'autres fuient la ville pour être plus proches de la nature. A la belle saison, dans ce camping de l'Ain agréable et convivial, les habitués croisent les touristes étrangers le temps d'un méchoui ou d'une partie de pétanque. L'hiver, ceux qui restent se serrent les coudes. Documentariste aimant traiter sur la durée des sujets de société (l'exclusion, la prison, l'hôpital, la justice...), Stéphane Mercurio filme avec empathie, simplicité et sens du détail des gens qui ont souvent connu la galère, mais qui ne vivent ni en marge de la société, ni dans la misère. A la fois lucides quant à leur situation précaire et fidèles à leurs rêves et à leurs projets d'avenir. -- Vincent Arquillière</desc>
+    <credits>
+      <director>Stéphane Mercurio</director>
+    </credits>
+    <date>2015</date>
+    <category lang="fr">documentaire : société</category>
+    <length units="hours">1</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_652867.jpg" />
+    <country>français</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+    <star-rating>
+      <value>3/5</value>
+    </star-rating>
+  </programme>
+  <programme start="20180502012500 +0200" stop="20180502025500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>La journée de la jupe</title>
+    <desc lang="fr">Sonia Bergerac est professeure de français dans un collège réputé difficile. Un jour, elle découvre un revolver dans le sac d'un de ses élèves et décide de s'en emparer. L'élève essaie de le récupérer. Un coup part dans la confusion. Prise de colère, l'enseignante menace sa classe, l'arme au poing...
+
+Critique : D’emblée, la tension est présente, presque tangible. On la perçoit dans les gestes mal assurés d’une femme au visage las, qui tente de se frayer un passage au milieu d’ados chahuteurs — ses élèves. La classe de français commence en retard et dans le chaos. Et puis un revolver tombe du sac d’un petit caïd. A bout de frayeur et d’exaspération, Sonia Bergerac (Isabelle Adjani, parfaite) ramasse l’arme et braque les gamins (eux aussi très bien) qui lui en ont tant fait voir. A mesure que la pression augmente à l’extérieur de la salle où elle retient les collégiens, l’enseignante se transforme en justicière. Le racisme, la religion, le machisme, toutes ces choses pesantes et taboues sont étalées sur la table, pour le meilleur et pour le pire…
+
+Etrange film, sur le fil du rasoir, délibérément incorrect et remarquablement écrit. Si les premiers accents sont ceux de la comédie corrosive, le propos dérive inexorablement vers la tragédie. La Journée de la jupe n’est pas (qu’)une chronique aigre-douce sur la violence en milieu scolaire. C’est une fable réussie sur toutes ces peurs qui s’ancrent dans le quotidien et auxquelles on finit par s’habituer, faute d’oser en soigner les racines, alors qu’elles ne peuvent qu’aboutir à un désastre social et humain.</desc>
+    <credits>
+      <director>Jean-Paul Lilienfeld</director>
+      <actor>Isabelle Adjani (Sonia Bergerac)</actor>
+      <actor>Denis Podalydès (Labouret)</actor>
+      <actor>Yann Collette (Bechet)</actor>
+      <actor>Nathalie Besançon (la ministre)</actor>
+      <actor>Karim Zakraoui (Farid)</actor>
+      <actor>Marc Citti (Frédéric)</actor>
+      <actor>Khalid Berkouz (Mehmet)</actor>
+      <actor>Yann Ebongé (Mouss)</actor>
+      <writer>Jean-Paul Lilienfeld</writer>
+    </credits>
+    <category lang="fr">téléfilm dramatique</category>
+    <length units="minutes">90</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_818589.jpg" />
+    <country>franco-belge</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+    <star-rating>
+      <value>4/5</value>
+    </star-rating>
+  </programme>
+  <programme start="20180502025500 +0200" stop="20180502034000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Dans le Sud de la Toscane</title>
+    <sub-title>De San Gimignano à la Maremme</sub-title>
+    <desc lang="fr">De la Toscane, les touristes connaissent Florence ou Pise : mais le Sud de cette région recèle aussi des joyaux, plus confidentiels, dont certains encore sauvages.</desc>
+    <credits>
+      <director>Susanne Gerlach</director>
+    </credits>
+    <category lang="fr">documentaire : découvertes</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_765515.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502034000 +0200" stop="20180502041000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Arte regards</title>
+    <sub-title>En Suède, la loi s'invite sous la couette</sub-title>
+    <desc lang="fr">En prise avec un thème d'actualité, des reportages vont à la rencontre de citoyens européens et proposent une plongée inédite dans leurs réalités quotidiennes.</desc>
+    <category lang="fr">documentaire : société</category>
+    <length units="minutes">30</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_747413.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>4:3</aspect>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502041000 +0200" stop="20180502050000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Jardins d'ici et d'ailleurs</title>
+    <sub-title>Muskau (Allemagne, Pologne)</sub-title>
+    <desc lang="fr">En 1811, le prince et paysagiste Hermann von Pückler décide de dédier sa vie à l'aménagement d'un parc public idéal dans lequel il expérimente de nouvelles formes de paysages. Inspiré par les jardins anglais, il s'affranchit néanmoins de cette influence pour développer son domaine, qui se déploie sur la frontière entre Allemagne et Pologne.</desc>
+    <credits>
+      <director>Aurélia Michon</director>
+    </credits>
+    <date>2015</date>
+    <category lang="fr">documentaire : voyage</category>
+    <length units="minutes">50</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_667123.jpg" />
+    <country>français</country>
+    <video>
+      <aspect>4:3</aspect>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502050000 +0200" stop="20180502064000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Anne Teresa De Keersmaeker à l'Opéra national de Paris</title>
+    <desc lang="fr">Trois ballets éblouissants recréés par la chorégraphe à l'automne dernier pour leur entrée au répertoire de l'Opéra Garnier, sous le titre «Bartók/Beethoven/Schönberg».</desc>
+    <credits>
+      <guest>les premiers danseurs et le corps de ballet de l'Opéra de Paris les étoiles</guest>
+      <guest>Béla Bartók</guest>
+      <guest>Ludwig van Beethoven</guest>
+      <guest>Arnold Schönberg</guest>
+    </credits>
+    <category lang="fr">contemporain</category>
+    <length units="minutes">100</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/43_GEP_707397.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502064000 +0200" stop="20180502071000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Quand l'histoire fait dates</title>
+    <sub-title>1431 - La chute d'Angkor</sub-title>
+    <desc lang="fr">Saison : 1 - D'Angkor, ne subsistent que des ruines : de quand date sa chute, et quand l'empire khmer s'est-il éteint ? Des questions qui restent en suspens.</desc>
+    <credits>
+      <director>Denis Van Waerebeke</director>
+      <writer>Patrick Boucheron</writer>
+      <writer>Denis Van Waerebeke</writer>
+    </credits>
+    <category lang="fr">documentaire : histoire</category>
+    <length units="minutes">30</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_822089.jpg" />
+    <country>français</country>
+    <episode-num system="xmltv_ns">0..</episode-num>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502071000 +0200" stop="20180502071500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Arte journal junior</title>
+    <credits>
+      <presenter>Dorothee Haffner</presenter>
+      <presenter>Magali Kreuzer</presenter>
+      <presenter>Carolyn Höfchen</presenter>
+      <presenter>Frank Rauschendorf</presenter>
+    </credits>
+    <category lang="fr">magazine jeunesse</category>
+    <length units="minutes">5</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_731843.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502071500 +0200" stop="20180502080000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>360°-GEO</title>
+    <sub-title>Les îles Cook, bienvenue au paradis !</sub-title>
+    <desc lang="fr">Au milieu de l'océan Pacifique, l'Etat insulaire des îles Cook, considéré par beaucoup comme le plus beau de la planète, est menacé par les conséquences du changement climatique.</desc>
+    <credits>
+      <director>Bettina Pohlmann</director>
+    </credits>
+    <date>2016</date>
+    <category lang="fr">documentaire : découvertes</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_822104.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502080000 +0200" stop="20180502084000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Invitation au voyage</title>
+    <desc lang="fr">Au sommaire :</desc>
+    <credits>
+      <presenter>Linda Lorin</presenter>
+    </credits>
+    <category lang="fr">magazine du tourisme</category>
+    <length units="minutes">40</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_GEP_785678.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502084000 +0200" stop="20180502092500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Les forêts inexplorées de l'Amazonie péruvienne</title>
+    <desc lang="fr">Dans les forêts pluviales du Sud-Est du Pérou, à l'incroyable biodiversité, les espèces animales ont développé de fascinantes stratégies de survie.</desc>
+    <credits>
+      <director>Tristan Thompson</director>
+    </credits>
+    <date>2016</date>
+    <category lang="fr">documentaire : animalier</category>
+    <length units="minutes">45</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_692295.jpg" />
+    <country>britannique</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502092500 +0200" stop="20180502105500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Karl Marx</title>
+    <sub-title>Penseur visionnaire</sub-title>
+    <desc lang="fr">Au printemps 1882, un an avant sa mort, Karl Marx n'a toujours pas terminé le deuxième tome de son «Capital». C'est ce point de départ qu'adopte ce documentaire-fiction narré par Eleanor, la plus jeune des filles de Marx, qui contribua grandement à transmettre ses oeuvres à la postérité. Le récit est émaillé d'épisodes du parcours du philosophe : il revient sur sa jeunesse romantique, sa rencontre déterminante de Friedrich Engels, avec qui il rédigera le «Manifeste du parti communiste», puis ses années difficiles à Bruxelles et à Londres. Ce portrait donne la parole à plusieurs biographes, ainsi qu'à des historiens et à des économistes, qui mettent en perspective sa vie et son oeuvre.
+
+Critique : Karl Marx n’en finit pas d’inspirer le cinéma. Après Le Jeune Karl Marx  (1) , biopic qui retraçait l’arrivée du philosophe à Paris en 1844 et sa rencontre avec Friedrich Engels, Arte lui consacre à son tour un documentaire pour célébrer le bicentenaire de sa naissance. Nous voici donc propulsés en 1882. Alors que ses idées commencent à gagner les cercles progressistes, Marx se débat entre une santé déclinante, des ennuis financiers et la difficile rédaction des deux derniers volumes du Capital.
+
+Oubliez l’énième cours poussiéreux sur les théories marxistes. Karl Marx, penseur visionnaire préfère retracer la biographie mouvementée du personnage, éternel exilé, qui mourut dans le quasi-anonymat. Les scènes de reconstitution, très soignées mais sagement illustratives, alternent avec les commentaires éclairants d’historiens, biographes et économistes. A travers le récit de sa fille benjamine, Eleanor, ce documentaire-fiction nous plonge dans l’intimité de Marx, raconte l’homme derrière la figure historique : sa relation avec ses enfants, son amitié avec Engels, et ses (nombreuses) contradictions intimes. Où l’on apprend que le célèbre pourfendeur du capitalisme n’hésitait pas à boursicoter à l’occasion, quand l’argent venait à manquer !
+
+ 
+
+(1) Réalisé par Raoul Peck et sorti en France en septembre 2017.</desc>
+    <credits>
+      <director>Christian Twente</director>
+    </credits>
+    <category lang="fr">documentaire : fiction</category>
+    <length units="minutes">90</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_820962.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+    <star-rating>
+      <value>3/5</value>
+    </star-rating>
+  </programme>
+  <programme start="20180502105500 +0200" stop="20180502115500 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>De Marx aux marxistes</title>
+    <desc lang="fr">Théoricien du capitalisme et de la lutte des classes, Karl Marx disait vouloir «transformer le monde». Aurait-il pu prévoir à quel point son oeuvre allait marquer le XXe siècle – et jusqu'à l'époque contemporaine ? Le documentariste Peter Dörfler entreprend un voyage de plus d'un siècle à travers les applications diverses des théories marxistes – entre les révolutions qu'elles ont inspirées et leur statut de référence théorique qui perdure jusqu'à nos jours. D'Athènes à Pékin, en passant par Berlin et Paris, ce panorama évoque le destin des régimes qui se sont revendiqués du communisme, mais aussi les mouvements étudiants de Mai 68 et les foisonnantes réflexions qui ont longtemps agité partis de gauche et organisations syndicales.</desc>
+    <credits>
+      <director>Peter Dörfler</director>
+    </credits>
+    <category lang="fr">documentaire : histoire</category>
+    <length units="hours">1</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_820966.jpg" />
+    <country>allemand</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502115500 +0200" stop="20180502125000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Les routes mythiques de l'Europe</title>
+    <sub-title>La Via Publicae au Portugal</sub-title>
+    <desc lang="fr">Au Portugal, la Via Publicae, principal axe nord-sud du pays à l'époque des Romains, reliait Braga à Lisbonne et permit au commerce de prospérer.</desc>
+    <credits>
+      <director>Jeremy JP Fekete</director>
+    </credits>
+    <date>2015</date>
+    <category lang="fr">documentaire : découvertes</category>
+    <length units="minutes">55</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_EMI_575727.jpg" />
+    <country>germano-français</country>
+    <video>
+      <aspect>16:9</aspect>
+      <quality>HDTV</quality>
+    </video>
+    <previously-shown />
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+  <programme start="20180502125000 +0200" stop="20180502130000 +0200" showview="" channel="C111.api.telerama.fr">
+    <title>Arte journal</title>
+    <desc lang="fr">L'actualité de la mi-journée en voix off.</desc>
+    <category lang="fr">journal</category>
+    <length units="minutes">10</length>
+    <icon src="http://television.telerama.fr/sites/tr_master/files/sheet_media/media/169_COL_561204.jpg" />
+    <video>
+      <aspect>16:9</aspect>
+    </video>
+    <rating system="CSA">
+      <value>Tout public</value>
+    </rating>
+  </programme>
+</tv>

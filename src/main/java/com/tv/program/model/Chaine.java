@@ -1,7 +1,6 @@
 package com.tv.program.model;
 
-public enum Chaine {
-    ARTE("Arte", "C111.api.telerama.fr");
+public class Chaine {
     private final String nom, id;
 
     Chaine(String nom, String id) {

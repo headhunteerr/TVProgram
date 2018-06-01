@@ -1,6 +1,7 @@
 package com.tv.program.model;
 
 public class Personne {
+    public final static String GUEST = "guest", WRITER = "writer", PRESENTER = "presenter";
     private String role;
     private String nom;
 

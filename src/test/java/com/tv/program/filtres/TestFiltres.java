@@ -22,7 +22,7 @@ public class TestFiltres {
         TODO ajouter des programmes dans ta liste programmes
         programmes.add(new Emission(arguments...));
          */
-        List<Programme> programmesFiltrees = ProgrammeFiltre.filtreChaine(programmes, Chaine.ARTE);
+        List<Programme> programmesFiltrees = ProgrammeFiltre.filtreChaine(programmes, null);
 
         List<Programme> expectedList = new ArrayList<>();
         /*
