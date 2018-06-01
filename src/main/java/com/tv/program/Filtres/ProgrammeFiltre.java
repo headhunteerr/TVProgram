@@ -9,13 +9,13 @@ import java.util.List;
 public class ProgrammeFiltre {
 
     public List<Programme> FiltreChaine (List<Programme> ListeProgramme, Chaine Chaine){
-        List<Programme> BonProgramme = new ArrayList<Programme>;
+        List<Programme> BonProgramme = new ArrayList<>();
 
-        for (Programme Unprogramme : ListeProgramme)
+        for (Programme UnProgramme : ListeProgramme)
         {
-            if (Unprogramme.getChaine() == Chaine){
+            if (UnProgramme.getChaine() == Chaine){
 
-                BonProgramme.add(Unprogramme);
+                BonProgramme.add(UnProgramme);
             }
         }
         return BonProgramme;
