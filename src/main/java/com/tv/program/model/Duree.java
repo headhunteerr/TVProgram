@@ -18,4 +18,17 @@ public class Duree {
     public long getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        switch (unit) {
+            case HOURS:
+                return value + " h";
+            case MINUTES:
+                return value + " mn";
+            case SECONDS:
+                return value + " s";
+        }
+        throw new RuntimeException("L'unité de temps fournie n'est pas valide");
+    }
 }

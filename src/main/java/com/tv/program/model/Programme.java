@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public abstract class Programme {
-    Chaine chaine;
-    String titre, sous_titre;
-    String type;
-    Date dateDeDebut, dateDeFin;
-    Duree duree;
-    List<Personne> credits;
-    String pays;
+    private Chaine chaine;
+    private String titre, sous_titre;
+    private String type;
+    private Date dateDeDebut, dateDeFin;
+    private Duree duree;
+    private List<Personne> credits = Collections.EMPTY_LIST;
+    private String pays;
     String aspect; //ex 16:9
     String qualite;
     String note;

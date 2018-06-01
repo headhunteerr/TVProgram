@@ -7,10 +7,11 @@ import java.util.List;
 public class Emission extends Programme {
     private final List<Personne> guests, writers;
 
-    Emission(Chaine chaine, String titre, String sous_titre, String type, Date dateDeDebut, Date dateDeFin, Duree duree, List<Personne> guests, List<Personne> writers, String pays, String aspect, String qualite, String note) {
+    public Emission(Chaine chaine, String titre, String sous_titre, String type, Date dateDeDebut, Date dateDeFin, Duree duree, List<Personne> guests, List<Personne> writers, String pays, String aspect, String qualite, String note) {
         super(chaine, titre, sous_titre, type, dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
         this.guests = Collections.unmodifiableList(guests);
         this.writers = Collections.unmodifiableList(writers);
+        setCredits(guests, writers);
     }
 
     public String toString() {
