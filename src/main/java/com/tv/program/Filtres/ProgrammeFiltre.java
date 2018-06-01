@@ -8,17 +8,17 @@ import java.util.List;
 
 public class ProgrammeFiltre {
 
-    public List<Programme> FiltreChaine (List<Programme> ListeProgramme, Chaine Chaine){
-        List<Programme> BonProgramme = new ArrayList<>();
+    public static  List<Programme> filtreChaine (List<Programme> ListeProgramme, Chaine Chaine){
+        List<Programme> ProgrammesFiltres = new ArrayList<>();
 
         for (Programme UnProgramme : ListeProgramme)
         {
             if (UnProgramme.getChaine() == Chaine){
 
-                BonProgramme.add(UnProgramme);
+                ProgrammesFiltres.add(UnProgramme);
             }
         }
-        return BonProgramme;
+        return ProgrammesFiltres;
     }
 
 }
