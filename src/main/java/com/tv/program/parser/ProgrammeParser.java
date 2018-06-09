@@ -3,7 +3,7 @@ package com.tv.program.parser;
 import com.tv.program.model.Chaine;
 import com.tv.program.model.Duree;
 import com.tv.program.model.Personne;
-import com.tv.program.model.Programme;
+import com.tv.program.model.programmes.Programme;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
@@ -15,11 +15,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class ProgrammeParser implements Parser<Programme> {
+class ProgrammeParser implements Parser<Programme> {
+    static final String START_ELEMENT_NAME = "programme";
+
     private final Map<String, Chaine> chaineMap;
     private final SimpleDateFormat sdf;
 
-    public ProgrammeParser(Map<String, Chaine> chaineMap) {
+    ProgrammeParser(Map<String, Chaine> chaineMap) {
         this.chaineMap = chaineMap;
         sdf = new SimpleDateFormat("yyyyMMddHHmmss X");
         sdf.setTimeZone(TimeZone.getDefault());
@@ -62,7 +64,16 @@ public class ProgrammeParser implements Parser<Programme> {
                         description = event.asCharacters().getData();
                         break;
                     case "credits":
-                        //TODO
+                        eventReader.nextEvent(); // \n
+                        event = eventReader.nextEvent();//first credit
+                        while (event.isStartElement())  {
+                            String role = event.asStartElement().getName().getLocalPart();
+                            event = eventReader.nextEvent();
+                            personnes.add(new Personne(event.asCharacters().getData(), role));
+                            eventReader.nextEvent(); // </>
+                            eventReader.nextEvent(); // \n
+                            event = eventReader.nextEvent(); //next credit or end of credit
+                        } ;
                         break;
                     case "date": // annee
                         event = eventReader.nextEvent();
@@ -95,9 +106,9 @@ public class ProgrammeParser implements Parser<Programme> {
                         qualite = event.asCharacters().getData();
                         break;
                     case "rating":
-                        event = eventReader.nextEvent(); //<rating>
-                        event = eventReader.nextEvent(); //"\n  "
-                        event = eventReader.nextEvent();// <value>
+                        eventReader.nextEvent(); //\n
+                        eventReader.nextEvent(); //<value>
+                        event = eventReader.nextEvent();// note
                         note = event.asCharacters().getData();
                         break;
                 }
@@ -105,7 +116,7 @@ public class ProgrammeParser implements Parser<Programme> {
 
             if(event.isEndElement()){
                 EndElement endElement = event.asEndElement();
-                if(endElement.getName().getLocalPart().equals("programme")){
+                if(endElement.getName().getLocalPart().equals(START_ELEMENT_NAME)){
                     return Programme.of(chaine, title, sousTitre, description, annee,
                             type, personnes, start, stop, duree, pays, aspect,
                             qualite, note);

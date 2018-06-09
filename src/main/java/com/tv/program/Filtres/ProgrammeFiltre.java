@@ -1,7 +1,7 @@
 package com.tv.program.Filtres;
 
 import com.tv.program.model.Chaine;
-import com.tv.program.model.Programme;
+import com.tv.program.model.programmes.Programme;
 
 import java.util.ArrayList;
 import java.util.List;

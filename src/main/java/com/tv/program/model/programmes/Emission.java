@@ -1,4 +1,6 @@
-package com.tv.program.model;
+package com.tv.program.model.programmes;
+
+import com.tv.program.model.Personne;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,9 +30,10 @@ public class Emission extends Programme {
         writers = Collections.unmodifiableList(writers);
     }
 
-    public String toString() {
-        //TODO
-        return null;
+    @Override
+    String creditsToString() {
+        return "guests=" + getGuests() + "\n\t"
+                + "writers=" + getWriters();
     }
 
     public List<Personne> getGuests() {

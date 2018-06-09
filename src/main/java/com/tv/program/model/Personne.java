@@ -1,7 +1,8 @@
 package com.tv.program.model;
 
+import java.util.Objects;
+
 public class Personne {
-    public final static String GUEST = "guest", WRITER = "writer", PRESENTER = "presenter";
     private String role;
     private String nom;
 
@@ -16,5 +17,19 @@ public class Personne {
 
     public String getNom() {
         return nom;
+    }
+
+    @Override
+    public String toString() {
+        return role + ": " + nom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Personne personne = (Personne) o;
+        return Objects.equals(role, personne.role) &&
+                Objects.equals(nom, personne.nom);
     }
 }

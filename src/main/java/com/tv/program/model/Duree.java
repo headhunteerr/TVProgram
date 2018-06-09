@@ -29,15 +29,19 @@ public class Duree {
         return value;
     }
 
+    public long getValueInSeconds() {
+        return unit.toSeconds(value);
+    }
+
     @Override
     public String toString() {
         switch (unit) {
             case HOURS:
-                return value + " h";
+                return value + "h";
             case MINUTES:
-                return value + " mn";
+                return value + "mn";
             case SECONDS:
-                return value + " s";
+                return value + "s";
         }
         throw new RuntimeException("L'unité de temps fournie n'est pas valide");
     }

@@ -1,16 +1,12 @@
 package com.tv.program.filtres;
 
 import com.tv.program.Filtres.ProgrammeFiltre;
-import com.tv.program.model.Chaine;
-import com.tv.program.model.Duree;
-import com.tv.program.model.Emission;
-import com.tv.program.model.Programme;
+import com.tv.program.model.programmes.Programme;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 import static org.junit.Assert.assertEquals;
 public class TestFiltres {
 

@@ -1,27 +1,28 @@
 package com.tv.program.parser;
 
-import com.tv.program.model.programmes.Programme;
+import com.tv.program.model.Chaine;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.assertNotNull;
 
-public class TestProgrammeParser {
+@FixMethodOrder(MethodSorters.JVM)
+public class TestChaineParser {
 
-    private ProgrammeParser programmeParser = new ProgrammeParser(Collections.emptyMap());
+    private ChaineParser chaineParser = new ChaineParser();
     private XMLEventReader xmlEventReader;
     private StartElement startElement;
     private InputStream xmlInputStream;
@@ -29,11 +30,11 @@ public class TestProgrammeParser {
     @Before
     public void init() throws XMLStreamException {
         xmlEventReader = XMLInputFactory.newInstance()
-                .createXMLEventReader(xmlInputStream = getClass().getResourceAsStream("/programmes.xml"));
+                .createXMLEventReader(xmlInputStream = getClass().getResourceAsStream("/chaines.xml"));
         XMLEvent xmlEvent;
         startElement = null;
 
-        do { //cherche le début des programmes
+        do { //cherche le début des chaines
             xmlEvent = xmlEventReader.nextEvent();
             if (xmlEvent.isStartElement()) {
                 startElement = xmlEvent.asStartElement();
@@ -41,7 +42,7 @@ public class TestProgrammeParser {
 
         } while (startElement == null ||
                 !startElement.getName().getLocalPart()
-                        .equals(ProgrammeParser.START_ELEMENT_NAME));
+                        .equals(ChaineParser.START_ELEMENT_NAME));
 
     }
 
@@ -53,19 +54,19 @@ public class TestProgrammeParser {
 
     @Test
     public void parseOne() throws  XMLStreamException {
-        Programme programme = programmeParser.parseFrom(startElement, xmlEventReader);
-        assertNotNull("Ne devrait pas etre null", programme);
-        System.out.println(programme);
+        Chaine chaine = chaineParser.parseFrom(startElement, xmlEventReader);
+        assertNotNull("Ne devrait pas etre null", chaine);
+        System.out.println(chaine);
     }
 
     @Test
     public void parseMultiple() throws  XMLStreamException {
-        List<Programme> programmes = new ArrayList<>();
+        List<Chaine> chaines = new ArrayList<>();
 
         while (xmlEventReader.hasNext()) {
-            Programme programme = programmeParser.parseFrom(startElement, xmlEventReader);
-            assertNotNull("Ne devrait pas etre null", programme);
-            programmes.add(programme);
+            Chaine chaine = chaineParser.parseFrom(startElement, xmlEventReader);
+            assertNotNull("Ne devrait pas etre null", chaine);
+            chaines.add(chaine);
             xmlEventReader.nextEvent(); //\n
             XMLEvent event = xmlEventReader.nextEvent();
             if (event.isStartElement()) {
@@ -77,7 +78,7 @@ public class TestProgrammeParser {
             }
         }
 
-        System.out.println(programmes);
-        System.out.println("length: " + programmes.size());
+        System.out.println(chaines);
+        System.out.println("length: " + chaines.size());
     }
 }

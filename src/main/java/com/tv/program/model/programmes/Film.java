@@ -1,4 +1,6 @@
-package com.tv.program.model;
+package com.tv.program.model.programmes;
+
+import com.tv.program.model.Personne;
 
 import java.util.List;
 
@@ -9,8 +11,8 @@ public class Film extends Programme {
     }
 
     @Override
-    public String toString() {
-        return null;
+    String creditsToString() {
+        return "guests=" + getGuests();
     }
 
     public List<Personne> getGuests() {

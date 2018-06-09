@@ -3,7 +3,7 @@ package com.tv.program.model;
 public class Chaine {
     private final String nom, id;
 
-    Chaine(String nom, String id) {
+    public Chaine(String nom, String id) {
         this.nom = nom;
         this.id = id;
     }

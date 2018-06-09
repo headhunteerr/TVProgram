@@ -1,7 +1,7 @@
-package com.tv.program.model;
+package com.tv.program.model.programmes;
 
-import java.util.Collections;
-import java.util.Date;
+import com.tv.program.model.Personne;
+
 import java.util.List;
 
 public class Documentaire extends Programme {
@@ -11,11 +11,11 @@ public class Documentaire extends Programme {
     }
 
     @Override
-    public String toString() {
-        return null;
+    String creditsToString() {
+        return "directors=" + getDirectors();
     }
 
-    public List<Personne> getGuests() {
+    public List<Personne> getDirectors() {
         return getCredits();
     }
 }

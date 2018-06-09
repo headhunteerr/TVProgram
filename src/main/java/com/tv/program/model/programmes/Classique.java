@@ -1,7 +1,7 @@
-package com.tv.program.model;
+package com.tv.program.model.programmes;
 
-import java.util.Collections;
-import java.util.Date;
+import com.tv.program.model.Personne;
+
 import java.util.List;
 
 public class Classique extends Programme {
@@ -10,10 +10,9 @@ public class Classique extends Programme {
         super(personnes);
     }
 
-
     @Override
-    public String toString() {
-        return null;
+    String creditsToString() {
+        return "guests=" + getGuests();
     }
 
     public List<Personne> getGuests() {

@@ -1,10 +1,16 @@
-package com.tv.program.model;
+package com.tv.program.model.programmes;
+
+import com.tv.program.model.Chaine;
+import com.tv.program.model.Duree;
+import com.tv.program.model.Personne;
 
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
 public abstract class Programme {
+    private static long ID_COUNT = 0;
+    
     private Chaine chaine;
     private String titre, sous_titre;
     private String description;
@@ -17,16 +23,12 @@ public abstract class Programme {
     private String aspect; //ex 16:9
     private String qualite; //ex HDTV
     private String note; //ex TOUT PUBLIC
+    private final long id;
 
     Programme(List<Personne> personnes) {
         this.credits = Collections.unmodifiableList(personnes);
+        this.id = ID_COUNT++;
     }
-
-    /**
-     * Obligation de redéfinir la méthode toString()
-     * pour les classes filles
-     */
-    public abstract String toString();
 
     public Chaine getChaine() {
         return chaine;
@@ -84,6 +86,37 @@ public abstract class Programme {
         return description;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (! (obj instanceof Programme)) {
+            return false;
+        }
+        return id == ((Programme) obj).id;
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + " {" +
+                "\n\tid=" + id +
+                "\n\tchaine=" + chaine +
+                "\n\ttitre='" + titre + '\'' +
+                "\n\tsous_titre='" + sous_titre + '\'' +
+                "\n\tdescription='" + description + '\'' +
+                "\n\ttype='" + type + '\'' +
+                "\n\tdateDeDebut=" + dateDeDebut +
+                "\n\tdateDeFin=" + dateDeFin +
+                "\n\tduree=" + duree +
+                "\n\tannee=" + annee +
+                "\n\t" + creditsToString() +
+                "\n\tpays='" + pays + '\'' +
+                "\n\taspect='" + aspect + '\'' +
+                "\n\tqualite='" + qualite + '\'' +
+                "\n\tnote='" + note + '\'' +
+                "\n}";
+    }
+    
+    abstract String creditsToString();
+
     public static Programme of(Chaine chaine, String titre, String sous_titre,
                                String description, int annee, String type,
                                List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
@@ -99,11 +132,16 @@ public abstract class Programme {
         } else if (type.contains("film")) {
             programme = new Film(personnes);
         } else if (type.contains("journal")) {
-            programme = new Journal(personnes);
+            programme = new Journal();
         } else if (type.contains("magazine")) {
             programme = new Magazine(personnes);
+        } else if (type.contains("contemporain")) {
+            programme = new Contemporain();
+        } else if (type.contains("série d'animation")) {
+            programme = new SerieAnimation();
         } else {
             throw new RuntimeException("Type de programme inconnu:" + type);
+            //TODO IL Y A PLUS DE 73 TYPES DE PROGRAMMES DIFFERENTS=> ARRETER CLASSE ABSTRAITES???
         }
 
         programme.chaine = chaine;
