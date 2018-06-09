@@ -1,5 +1,7 @@
 package com.tv.program.model;
 
+import java.util.Objects;
+
 public class Chaine {
     private final String nom, id;
 
@@ -19,5 +21,13 @@ public class Chaine {
 
     public String getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Chaine chaine = (Chaine) o;
+        return Objects.equals(id, chaine.id);
     }
 }
