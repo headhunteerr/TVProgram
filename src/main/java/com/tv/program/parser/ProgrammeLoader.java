@@ -10,6 +10,7 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -23,62 +24,97 @@ public class ProgrammeLoader {
         } catch (XMLStreamException e) {
             throw new ParsingException("Erreur pendant l'instanciation de xmlEventReader", e);
         }
-        XMLEvent xmlEvent;
-        StartElement startElement = null;
 
-        do { //cherche le début des chaines
-            try {
-                xmlEvent = xmlEventReader.nextEvent();
-            } catch (XMLStreamException e) {
-                throw new ParsingException("Erreur pendant la recherche des chaines", e);
+        Map<String, Chaine> chaineMap = new HashMap<>(); //va servir pour instancier les programmes
+
+        ParsingStreamIterator<Chaine> chaineIterator = new ParsingStreamIterator<>(xmlEventReader, new ChaineParser());
+        while (chaineIterator.hasNext()) {
+            Chaine chaine = chaineIterator.next();
+            chaines.add(chaine);
+            chaineMap.put(chaine.getId(), chaine);
+        }
+
+        XMLEvent event = chaineIterator.getXmlEvent();
+        if (!event.isStartElement() ||
+                !event.asStartElement().getName().getLocalPart().equals(ProgrammeParser.START_ELEMENT_NAME)) {
+            throw new ParsingException("Le fichier xml est mal formaté: les programmes sont censés" +
+                    "se situer juste après les chaines");
+        }
+
+        ParsingStreamIterator<Programme> programmeIterator = new ParsingStreamIterator<>(xmlEventReader,
+                new ProgrammeParser(chaineMap), event);
+
+        while (programmeIterator.hasNext()) {
+            programmes.add(programmeIterator.next());
+        }
+        try {
+            xmlEventReader.close();
+        } catch (XMLStreamException e) {
+            throw new ParsingException("Erreur pendant la fermeture de l'evenReader", e);
+        }
+    }
+
+    private static class ParsingStreamIterator<T> implements Iterator<T> {
+        private StartElement startElement;
+        private XMLEventReader xmlEventReader;
+        private Parser<T> parser;
+        private XMLEvent xmlEvent;
+
+        ParsingStreamIterator(XMLEventReader xmlEventReader, Parser<T> parser, XMLEvent xmlEvent) {
+            this.xmlEventReader = xmlEventReader;
+            this.parser = parser;
+            this.xmlEvent = xmlEvent;
+            this.startElement = xmlEvent.asStartElement();
+        }
+
+        ParsingStreamIterator(XMLEventReader xmlEventReader, Parser<T> parser) {
+            this.xmlEventReader = xmlEventReader;
+            this.parser = parser;
+
+            do { //cherche le début des elements
+                try {
+                    xmlEvent = xmlEventReader.nextEvent();
+                } catch (XMLStreamException e) {
+                    throw new ParsingException("Erreur pendant la recherche du début de " + parser.tagName(), e);
+                }
+                if (xmlEvent.isStartElement()) {
+                    startElement = xmlEvent.asStartElement();
+                }
+
+            } while (startElement == null ||
+                    !startElement.getName().getLocalPart()
+                            .equals(parser.tagName()));
+        }
+
+        @Override
+        public boolean hasNext() {
+            if (!xmlEvent.isStartElement()) {
+                return false;
             }
-            if (xmlEvent.isStartElement()) {
-                startElement = xmlEvent.asStartElement();
-            }
+            startElement = xmlEvent.asStartElement();
+            return startElement.getName().getLocalPart().equals(parser.tagName());
+        }
 
-        } while (startElement == null ||
-                !startElement.getName().getLocalPart()
-                        .equals(ChaineParser.START_ELEMENT_NAME));
-
-        ChaineParser chaineParser = new ChaineParser();
-        Map<String, Chaine> chaineMap = new HashMap<>();
-        while (xmlEventReader.hasNext() && (!xmlEvent.isStartElement() || !xmlEvent.asStartElement().getName().getLocalPart().equals(ProgrammeParser.START_ELEMENT_NAME))) {
+        @Override
+        public T next() {
+            T object;
             try {
-                Chaine chaine = chaineParser.parseFrom(startElement, xmlEventReader);
-                chaines.add(chaine);
-                chaineMap.put(chaine.getId(), chaine);
+                object = parser.parseFrom(startElement, xmlEventReader);
                 xmlEventReader.nextEvent(); //\n
                 xmlEvent = xmlEventReader.nextEvent();
                 if (xmlEvent.isStartElement()) {
                     startElement = xmlEvent.asStartElement();
-                } else if (xmlEvent.isEndElement() && xmlEvent.asEndElement().getName().getLocalPart().equals("tv")) {
-                    break; //fin des programmes
-                } else {
-                    throw new ParsingException("xml mal formatté");
                 }
             } catch (XMLStreamException e) {
-                throw new ParsingException("Erreur pendant le chargement des chaines", e);
+                throw new ParsingException(String.format("Erreur lors du parsing d'un élement de type '%s'",
+                        parser.tagName()));
             }
+
+            return object;
         }
 
-        ProgrammeParser programmeParser = new ProgrammeParser(chaineMap);
-
-        while (xmlEventReader.hasNext()) {
-            try {
-                Programme programme = programmeParser.parseFrom(startElement, xmlEventReader);
-                programmes.add(programme);
-                xmlEventReader.nextEvent(); //\n
-                XMLEvent event = xmlEventReader.nextEvent();
-                if (event.isStartElement()) {
-                    startElement = event.asStartElement();
-                } else if (event.isEndElement() && event.asEndElement().getName().getLocalPart().equals("tv")) {
-                    break; //fin des programmes
-                } else {
-                    throw new ParsingException("xml mal formatté");
-                }
-            } catch (XMLStreamException e) {
-                throw new ParsingException("Erreur pendant le chargement des programmes", e);
-            }
+        XMLEvent getXmlEvent() {
+            return xmlEvent;
         }
     }
 }

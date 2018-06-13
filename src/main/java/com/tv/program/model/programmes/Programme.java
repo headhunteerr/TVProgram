@@ -4,6 +4,7 @@ import com.tv.program.model.Chaine;
 import com.tv.program.model.Duree;
 import com.tv.program.model.Personne;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -140,8 +141,14 @@ public abstract class Programme {
         } else if (type.contains("série d'animation")) {
             programme = new SerieAnimation();
         } else {
-            throw new RuntimeException("Type de programme inconnu:" + type);
             //TODO IL Y A PLUS DE 73 TYPES DE PROGRAMMES DIFFERENTS=> ARRETER CLASSE ABSTRAITES???
+            System.err.println("Type inconnu: " + type);
+            return new Programme(new ArrayList<>()) {
+                @Override
+                String creditsToString() {
+                    return null;
+                }
+            };
         }
 
         programme.chaine = chaine;

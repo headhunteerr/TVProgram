@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Film extends Programme {
 
-    public Film(List<Personne> personnes) {
+    Film(List<Personne> personnes) {
         super(personnes);
     }
 

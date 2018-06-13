@@ -6,4 +6,5 @@ import javax.xml.stream.events.StartElement;
 
 public interface Parser<T> {
     T parseFrom(StartElement startElement, XMLEventReader eventReader) throws XMLStreamException;
+    String tagName();
 }

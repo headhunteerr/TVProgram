@@ -135,4 +135,9 @@ class ProgrammeParser implements Parser<Programme> {
             throw new ParsingException("La date est mal formattée");
         }
     }
+
+    @Override
+    public String tagName() {
+        return START_ELEMENT_NAME;
+    }
 }

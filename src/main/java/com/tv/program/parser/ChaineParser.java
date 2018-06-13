@@ -36,7 +36,11 @@ class ChaineParser implements Parser<Chaine> {
                 }
             }
         }
+        throw new ParsingException("Le fichier est mal formatté");
+    }
 
-        return null;
+    @Override
+    public String tagName() {
+        return START_ELEMENT_NAME;
     }
 }

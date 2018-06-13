@@ -3,7 +3,7 @@ package com.tv.program.model.programmes;
 import java.util.Collections;
 
 public class Journal extends Emission {
-    public Journal() {
+    Journal() {
         super(Collections.emptyList());
     }
 
