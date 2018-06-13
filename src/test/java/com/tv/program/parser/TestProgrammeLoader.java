@@ -10,8 +10,6 @@ import java.util.List;
 
 public class TestProgrammeLoader {
 
-
-
     @Test
     public void parse() {
         InputStream inputStream = TestProgrammeLoader.class.getResourceAsStream("/small_tvguide.xml");

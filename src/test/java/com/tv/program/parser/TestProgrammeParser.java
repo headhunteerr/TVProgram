@@ -42,7 +42,6 @@ public class TestProgrammeParser {
         } while (startElement == null ||
                 !startElement.getName().getLocalPart()
                         .equals(ProgrammeParser.START_ELEMENT_NAME));
-
     }
 
     @After
@@ -77,7 +76,7 @@ public class TestProgrammeParser {
             }
         }
 
-        System.out.println(programmes);
         System.out.println("length: " + programmes.size());
+        System.out.println(programmes);
     }
 }

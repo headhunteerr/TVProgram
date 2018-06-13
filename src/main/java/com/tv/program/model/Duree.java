@@ -45,4 +45,13 @@ public class Duree {
         }
         throw new RuntimeException("L'unité de temps fournie n'est pas valide");
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Duree duree = (Duree) o;
+        return value == duree.value &&
+                unit == duree.unit;
+    }
 }

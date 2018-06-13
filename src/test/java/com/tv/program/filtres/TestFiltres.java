@@ -16,19 +16,18 @@ public class TestFiltres {
 
         /*
         TODO ajouter des programmes dans ta liste programmes
-        programmes.add(new Emission(arguments...));
+        programmes.add(Programme.of(arguments...));
          */
         List<Programme> programmesFiltrees = ProgrammeFiltre.filtreChaine(programmes, null);
 
         List<Programme> expectedList = new ArrayList<>();
         /*
         TODO comme tu connais le resultat, tu construit ta liste expectedList qui contiendra le resultat attendu
-        programmes.add(new Emission(arguments...));
+        programmes.add(Programme.of(arguments...));
         */
 
         assertEquals("Les listes ne sont pas égales", expectedList, programmesFiltrees);
     }
-
 
     @Test
     public void test2() {

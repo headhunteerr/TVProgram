@@ -25,9 +25,6 @@ public class Emission extends Programme {
                 case "presenter":
                     presenters.add(personne);
                     break;
-                default:
-                    System.err.println("Role inconnu pour Emission: " + personne.getRole());
-                    break;
             }
         }
         guests = Collections.unmodifiableList(guests);

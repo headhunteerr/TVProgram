@@ -43,7 +43,6 @@ public class TestChaineParser {
         } while (startElement == null ||
                 !startElement.getName().getLocalPart()
                         .equals(ChaineParser.START_ELEMENT_NAME));
-
     }
 
     @After

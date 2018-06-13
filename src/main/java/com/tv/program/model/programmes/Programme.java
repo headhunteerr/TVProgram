@@ -4,13 +4,13 @@ import com.tv.program.model.Chaine;
 import com.tv.program.model.Duree;
 import com.tv.program.model.Personne;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Stream;
 
 public abstract class Programme {
     private static long ID_COUNT = 0;
+
+    final static String EMPTY_CREDITS = "credits=[]";
     
     private Chaine chaine;
     private String titre, sous_titre;
@@ -138,17 +138,14 @@ public abstract class Programme {
             programme = new Magazine(personnes);
         } else if (type.contains("contemporain")) {
             programme = new Contemporain();
-        } else if (type.contains("série d'animation")) {
-            programme = new SerieAnimation();
+        } else if (isSport(type)) {
+            programme = new Sport();
+        } else if (isMusique(type)) {
+            programme = new Musique(personnes);
+        } else if (type.contains("série")) {
+            programme = new Serie(personnes);
         } else {
-            //TODO IL Y A PLUS DE 73 TYPES DE PROGRAMMES DIFFERENTS=> ARRETER CLASSE ABSTRAITES???
-            System.err.println("Type inconnu: " + type);
-            return new Programme(new ArrayList<>()) {
-                @Override
-                String creditsToString() {
-                    return null;
-                }
-            };
+            programme = new Autre(personnes);
         }
 
         programme.chaine = chaine;
@@ -166,5 +163,16 @@ public abstract class Programme {
         programme.note = note;
 
         return programme;
+    }
+
+    private static boolean isSport(String type) {
+        return Stream.of("sport", "catch", "surf", "boxing", "cyclisme", "voile")
+                .anyMatch(type::contains);
+    }
+
+    private static boolean isMusique(String type) {
+        return Stream.of("opéra", "contemporain", "son", "pop", "rap", "techno"
+        , "music", "clips")
+                .anyMatch(type::contains);
     }
 }

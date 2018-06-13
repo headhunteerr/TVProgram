@@ -22,4 +22,34 @@ public class ProgrammesCounter {
 
         System.out.println(String.format("Il y a %d chaines et %d programmes", chaines.size(), programmes.size()));
     }
+    /**
+     * TYPES IGNORÉES:
+     *
+     * talk-show
+     * loterie
+     * fin
+     * divertissement-humour
+     * jeunesse : dessin animé jeunesse
+     * jeunesse : dessin animé manga
+     * météo
+     * débat parlementaire
+     * fitness
+     * humour
+     * cérémonie
+     * cirque
+     * jeu
+     * débat
+     * one man show
+     * hippisme
+     * jeunesse : dessin animé
+     * programme indéterminé
+     * feuilleton réaliste
+     * pièce de théâtre
+     * divertissement
+     * feuilleton sentimental
+     * variétés
+     * téléréalité
+     * autre
+     *
+     */
 }

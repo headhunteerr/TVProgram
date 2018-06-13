@@ -50,7 +50,7 @@ public class ProgrammeLoader {
         try {
             xmlEventReader.close();
         } catch (XMLStreamException e) {
-            throw new ParsingException("Erreur pendant la fermeture de l'evenReader", e);
+            throw new ParsingException("Erreur pendant la fermeture de l'eventReader", e);
         }
     }
 
@@ -102,9 +102,6 @@ public class ProgrammeLoader {
                 object = parser.parseFrom(startElement, xmlEventReader);
                 xmlEventReader.nextEvent(); //\n
                 xmlEvent = xmlEventReader.nextEvent();
-                if (xmlEvent.isStartElement()) {
-                    startElement = xmlEvent.asStartElement();
-                }
             } catch (XMLStreamException e) {
                 throw new ParsingException(String.format("Erreur lors du parsing d'un élement de type '%s'",
                         parser.tagName()));

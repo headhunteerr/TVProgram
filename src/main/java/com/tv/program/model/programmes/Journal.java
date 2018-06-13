@@ -7,9 +7,8 @@ public class Journal extends Emission {
         super(Collections.emptyList());
     }
 
-
     @Override
     String creditsToString() {
-        return "credits=[]";
+        return EMPTY_CREDITS;
     }
 }

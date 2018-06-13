@@ -10,6 +10,6 @@ public class Contemporain extends Programme {
 
     @Override
     String creditsToString() {
-        return "credits=[]";
+        return EMPTY_CREDITS;
     }
 }

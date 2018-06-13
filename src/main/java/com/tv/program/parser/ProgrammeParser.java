@@ -73,7 +73,7 @@ class ProgrammeParser implements Parser<Programme> {
                             eventReader.nextEvent(); // </>
                             eventReader.nextEvent(); // \n
                             event = eventReader.nextEvent(); //next credit or end of credit
-                        } ;
+                        }
                         break;
                     case "date": // annee
                         event = eventReader.nextEvent();
