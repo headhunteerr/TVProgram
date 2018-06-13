@@ -142,7 +142,8 @@ public abstract class Programme {
             programme = new Sport();
         } else if (isMusique(type)) {
             programme = new Musique(personnes);
-        } else if (type.contains("série")) {
+        } else if (type.contains("série") ||
+                type.contains("feuilleton")) {
             programme = new Serie(personnes);
         } else {
             programme = new Autre(personnes);

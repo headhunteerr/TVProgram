@@ -43,10 +43,8 @@ public class ProgrammesCounter {
      * hippisme
      * jeunesse : dessin animé
      * programme indéterminé
-     * feuilleton réaliste
      * pièce de théâtre
      * divertissement
-     * feuilleton sentimental
      * variétés
      * téléréalité
      * autre
