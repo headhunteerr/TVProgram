@@ -149,19 +149,9 @@ public abstract class Programme {
             programme = new Autre(personnes);
         }
 
-        programme.chaine = chaine;
-        programme.titre = titre;
-        programme.sous_titre = sous_titre;
-        programme.description = description;
-        programme.annee = annee;
-        programme.dateDeDebut = dateDeDebut;
-        programme.dateDeFin = dateDeFin;
-        programme.duree = duree;
-        programme.pays = pays;
-        programme.aspect = aspect;
-        programme.qualite = qualite;
         programme.type = type;
-        programme.note = note;
+        setup(programme, chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
 
         return programme;
     }
@@ -175,5 +165,134 @@ public abstract class Programme {
         return Stream.of("opéra", "contemporain", "son", "pop", "rap", "techno"
         , "music", "clips")
                 .anyMatch(type::contains);
+    }
+
+    private static void setup(Programme programme, Chaine chaine, String titre, String sous_titre,
+                              String description, int annee,
+                               Date dateDeDebut, Date dateDeFin,
+                              Duree duree, String pays, String aspect, String qualite,
+                              String note) {
+        programme.chaine = chaine;
+        programme.titre = titre;
+        programme.sous_titre = sous_titre;
+        programme.description = description;
+        programme.annee = annee;
+        programme.dateDeDebut = dateDeDebut;
+        programme.dateDeFin = dateDeFin;
+        programme.duree = duree;
+        programme.pays = pays;
+        programme.aspect = aspect;
+        programme.qualite = qualite;
+        programme.note = note;
+    }
+
+    private static  <T extends Programme> T create(T programme, Chaine chaine, String titre, String sous_titre,
+                                                   String description, int annee,
+                                                   Date dateDeDebut, Date dateDeFin,
+                                                   Duree duree, String pays, String aspect, String qualite,
+                                                   String note) {
+        ((Programme)programme).type = programme.getClass().getSimpleName();
+        setup(programme, chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+        return programme;
+    }
+
+    public static Autre autre(Chaine chaine, String titre, String sous_titre,
+                              String description, int annee,
+                              List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
+                              Duree duree, String pays, String aspect, String qualite,
+                              String note) {
+        return create(new Autre(personnes), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Classique classique(Chaine chaine, String titre, String sous_titre,
+                                      String description, int annee,
+                                      List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
+                                      Duree duree, String pays, String aspect, String qualite,
+                                      String note) {
+        return create(new Classique(personnes), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Contemporain contemporain(Chaine chaine, String titre, String sous_titre,
+                                      String description, int annee,
+                                       Date dateDeDebut, Date dateDeFin,
+                                      Duree duree, String pays, String aspect, String qualite,
+                                      String note) {
+        return create(new Contemporain(), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Documentaire documentaire(Chaine chaine, String titre, String sous_titre,
+                                            String description, int annee,
+                                            List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
+                                            Duree duree, String pays, String aspect, String qualite,
+                                            String note) {
+        return create(new Documentaire(personnes), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Emission emission(Chaine chaine, String titre, String sous_titre,
+                                            String description, int annee,
+                                            List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
+                                            Duree duree, String pays, String aspect, String qualite,
+                                            String note) {
+        return create(new Emission(personnes), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Film film(Chaine chaine, String titre, String sous_titre,
+                            String description, int annee,
+                            List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
+                            Duree duree, String pays, String aspect, String qualite,
+                            String note) {
+        return create(new Film(personnes), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Journal journal(Chaine chaine, String titre, String sous_titre,
+                            String description, int annee,
+                             Date dateDeDebut, Date dateDeFin,
+                            Duree duree, String pays, String aspect, String qualite,
+                            String note) {
+        return create(new Journal(), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Magazine magazine(Chaine chaine, String titre, String sous_titre,
+                                    String description, int annee,
+                                    List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
+                                    Duree duree, String pays, String aspect, String qualite,
+                                    String note) {
+        return create(new Magazine(personnes), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Musique musique(Chaine chaine, String titre, String sous_titre,
+                                    String description, int annee,
+                                    List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
+                                    Duree duree, String pays, String aspect, String qualite,
+                                    String note) {
+        return create(new Musique(personnes), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Serie serie(Chaine chaine, String titre, String sous_titre,
+                                    String description, int annee,
+                                    List<Personne> personnes, Date dateDeDebut, Date dateDeFin,
+                                    Duree duree, String pays, String aspect, String qualite,
+                                    String note) {
+        return create(new Serie(personnes), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
+    }
+
+    public static Sport sport(Chaine chaine, String titre, String sous_titre,
+                                    String description, int annee,
+                                    Date dateDeDebut, Date dateDeFin,
+                                    Duree duree, String pays, String aspect, String qualite,
+                                    String note) {
+        return create(new Sport(), chaine, titre, sous_titre, description, annee,
+                dateDeDebut, dateDeFin, duree, pays, aspect, qualite, note);
     }
 }
