@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class Duree {
+public class Duree implements Comparable<Duree> {
     private final static Map<String, TimeUnit> TIME_UNIT_MAP;
 
     static {
@@ -18,6 +18,9 @@ public class Duree {
 
     public Duree(String unit, long value) {
         this.unit = TIME_UNIT_MAP.get(unit);
+        if (unit == null) {
+            throw new RuntimeException("Unité de mesure inconnue: " + unit);
+        }
         this.value = value;
     }
 
@@ -53,5 +56,10 @@ public class Duree {
         Duree duree = (Duree) o;
         return value == duree.value &&
                 unit == duree.unit;
+    }
+
+    @Override
+    public int compareTo(Duree duree) {
+        return (int) (getValueInSeconds() - duree.getValueInSeconds());
     }
 }

@@ -87,6 +87,10 @@ public abstract class Programme {
         return description;
     }
 
+    public long getId() {
+        return id;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (! (obj instanceof Programme)) {
