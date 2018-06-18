@@ -1,9 +1,9 @@
 package com.tv.program.tri;
 
-import com.tv.program.model.programmes.Programme;
+import com.tv.program.model.Personne;
+import com.tv.program.model.programmes.*;
 
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class ProgrammeTrieur {
     private final static Comparator<Programme> PAR_DATE_DE_DEBUT =
@@ -67,5 +67,67 @@ public class ProgrammeTrieur {
 
     public static void trierParQualitee(List<Programme> programmes) {
         programmes.sort(PAR_QUALITE);
+    }
+
+
+    /**
+     * Retourne une liste de personnes ainsi que leurs nombre d'apparitions pour
+     * un titre de programme donné
+     *
+     * @param programmes la liste de programmes
+     * @param titre  titre du programme sur lequel filtrer
+     * @return retourne une nouvelle liste d'acteurs (key) associé à leurs nombre d'apparition (value)
+     * trié par nombre d'apparition (Du plus grand nombre au plus petit)
+     */
+    public static List<Map.Entry<Personne, Integer>> acteursParApparition(List<Programme> programmes, String titre) {
+        Map<Personne, Integer> acteursMap = new HashMap<>();
+
+        for (Programme programme : programmes) {
+            if (programme.getTitre().contains(titre)) {
+                for (Personne personne : programme.getCredits()) {
+                    int count = acteursMap.getOrDefault(personne, 0);
+                    acteursMap.put(personne, count+1);
+                }
+            }
+        }
+        List<Map.Entry<Personne, Integer>> acteursCount = new ArrayList<>(acteursMap.size());
+        acteursCount.addAll(acteursMap.entrySet());
+        acteursCount.sort((e1, e2) -> e2.getValue() - e1.getValue());
+        return acteursCount;
+    }
+
+    //pour la question  c) 3), la deuxième
+    public ProgrammeTypeList emissionByPeriode(List<Programme> programmes, Date dateDeDebut, Date dateDeFin) {
+        ProgrammeTypeList list = new ProgrammeTypeList();
+        for (Programme programme : programmes) {
+            if (programme.getDateDeDebut().after(dateDeFin) || programme.getDateDeFin().before(dateDeDebut)) {
+                continue;
+            }
+            if (programme instanceof Autre) {
+                list.autres.add((Autre) programme);
+            } else if (programme instanceof Classique) {
+                list.classiques.add((Classique) programme);
+            } else if (programme instanceof Contemporain) {
+                list.contemporains.add((Contemporain) programme);
+            } else if (programme instanceof Documentaire) {
+                list.documentaires.add((Documentaire) programme);
+            } else if (programme instanceof Emission) {
+                list.emissions.add((Emission) programme);
+            } else if (programme instanceof Film) {
+                list.films.add((Film) programme);
+            } else if (programme instanceof Journal) {
+                list.journals.add((Journal) programme);
+            } else if (programme instanceof Magazine) {
+                list.magazines.add((Magazine) programme);
+            } else if (programme instanceof Musique) {
+                list.musiques.add((Musique) programme);
+            } else if (programme instanceof Serie) {
+                list.series.add((Serie) programme);
+            } else if (programme instanceof Sport) {
+                list.sports.add((Sport) programme);
+            }
+        }
+
+        return list;
     }
 }

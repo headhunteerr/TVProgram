@@ -6,6 +6,7 @@ import static org.mockito.Mockito.when;
 import static org.junit.Assert.assertEquals;
 
 import com.tv.program.model.Duree;
+import com.tv.program.model.Personne;
 import com.tv.program.model.programmes.Programme;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,7 +39,7 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParDateDeDebut(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
     @Test
@@ -57,7 +58,7 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParDateDeFin(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
     @Test
@@ -75,7 +76,7 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParTitre(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
     @Test
@@ -93,7 +94,7 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParAnnee(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
     @Test
@@ -111,7 +112,7 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParPays(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
     @Test
@@ -129,7 +130,7 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParType(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
     @Test
@@ -147,7 +148,7 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParDuree(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
     @Test
@@ -165,7 +166,7 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParAspect(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
     @Test
@@ -183,11 +184,81 @@ public class ProgrammeTrieurTest {
 
         Collections.shuffle(programmes);
         ProgrammeTrieur.trierParQualitee(programmes);
-        assertOrder();
+        assertRightOrder();
     }
 
+    @Test
+    public void acteursParApparition() {
+        final Personne p1 = new Personne("John Stark", "producer");
+        final Personne p2 = new Personne("Einstein", "producer");
+        final Personne p3 = new Personne("Moi-meme", "actor");
+        final String film = "film";
+        final Personne[] personnes = new Personne[] {p1, p2, p3};
+        for (Personne personne : personnes) {
+            List<Personne> list = new ArrayList<>();
+            list.add(personne);
+            Programme programme = mock(Programme.class);
+            when(programme.getCredits())
+                    .thenReturn(list);
+            when(programme.getTitre())
+                    .thenReturn(film);
+            programmes.add(programme);
+        }
+        Programme programme = mock(Programme.class);
+        when(programme.getCredits())
+                .thenReturn(Arrays.asList(personnes));
+        when(programme.getTitre())
+                .thenReturn("autre-chose");
 
-    private void assertOrder() {
+        programmes.add(programme);
+
+        programmes.get(0).getCredits().add(p3);
+        programmes.get(1).getCredits().add(p3);
+        programmes.get(2).getCredits().add(p1);
+
+        List<Map.Entry<Personne, Integer>> entries = ProgrammeTrieur
+                .acteursParApparition(programmes, film);
+
+        List<Map.Entry<Personne, Integer>> expected =
+                Arrays.asList(newEntry(p3, 3),
+                        newEntry(p1, 2),
+                        newEntry(p2, 1));
+
+        assertEquals("Should be equal", expected, entries);
+
+    }
+
+    private Map.Entry<Personne, Integer> newEntry(Personne p, Integer i) {
+        return new Map.Entry<Personne, Integer>() {
+            @Override
+            public Personne getKey() {
+                return p;
+            }
+
+            @Override
+            public Integer getValue() {
+                return i;
+            }
+
+            @Override
+            public Integer setValue(Integer value) {
+                return null;
+            }
+
+            @Override
+            public String toString() {
+                return getKey() + "=" + getValue();
+            }
+
+            @Override
+            public boolean equals(Object obj) {
+                Map.Entry<Personne, Integer> entry = (Map.Entry<Personne, Integer>) obj;
+                return entry.equals(this);
+            }
+        };
+    }
+
+    private void assertRightOrder() {
         for (int i = 0; i < N; i++) {
             assertEquals("Devrait etre egal", i, programmes.get(i).getId());
         }
