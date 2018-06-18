@@ -25,18 +25,7 @@ public class TestFiltres {
 
     //public void test1() {
 	 public static void main(String[] args) {
-        Personne Maxime = new Personne("Vicens", "acteur");
-        Personne Maxime2 = new Personne("Vicens", "réalisateur");
-        Personne Maxime3 = new Personne("Vicens", "développeur");
-        Personne Maxime4 = new Personne("Vicens", "présentateur");
-        Personne Maxime5 = new Personne("Vicens", "acteur");
-        
-        //List<Programme> programmes = new ArrayList<>();
-        List<Personne> personne = new ArrayList();
-        personne.add(Maxime);
-        personne.add(Maxime3);
-        personne.add(Maxime5);
-        
+              
         List<Programme> programmes = new ArrayList<>();
         List<Chaine> chaines = new ArrayList<>();
         try (InputStream inputStream = ProgrammesCounter.class.getResourceAsStream("/tvguide.xml")){
@@ -58,7 +47,7 @@ public class TestFiltres {
         programmes.add(Programme.of(arguments...));
         */
 
-        //assertEquals("Les listes ne sont pas égales", expectedList, programmesFiltrees);
+        //assertEquals("Les listes ne sont pas egales", expectedList, programmesFiltrees);
         
       DateFormat df = new SimpleDateFormat("dd MM yyyy hh:mm:ss");
       //DateFormat df = new SimpleDateFormat("dd MM yyyy");

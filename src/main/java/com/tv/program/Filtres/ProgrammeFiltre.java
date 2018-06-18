@@ -74,13 +74,13 @@ public class ProgrammeFiltre {
             
             DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
             
-            Date début = null;
+            Date debut = null;
             Date fin = null;
             
             try
             
             {            
-            	début= df.parse(String.valueOf(UnProgramme.getDateDeDebut().getDay()) + "-" + String.valueOf(UnProgramme.getDateDeDebut().getMonth()+1) + "-" + String.valueOf(UnProgramme.getDateDeDebut().getYear()+1900));
+            	debut= df.parse(String.valueOf(UnProgramme.getDateDeDebut().getDay()) + "-" + String.valueOf(UnProgramme.getDateDeDebut().getMonth()+1) + "-" + String.valueOf(UnProgramme.getDateDeDebut().getYear()+1900));
             	fin= df.parse(String.valueOf(UnProgramme.getDateDeFin().getDay()) + "-" + String.valueOf(UnProgramme.getDateDeFin().getMonth()+1) + "-" + String.valueOf(UnProgramme.getDateDeFin().getYear()+1900));
                 
             } catch (ParseException e){
@@ -90,7 +90,7 @@ public class ProgrammeFiltre {
             
            
             for (Date UnJour : TousLesJours) {
-                if (UnJour.equals(début)) {
+                if (UnJour.equals(debut)) {
 
                 	AjouterDebut = false;
                 }
@@ -103,9 +103,9 @@ public class ProgrammeFiltre {
                 }
             }
             
-            AjouterFin = (AjouterFin && !début.equals(fin));
+            AjouterFin = (AjouterFin && !debut.equals(fin));
             if (AjouterDebut) {
-                TousLesJours.add(début);
+                TousLesJours.add(debut);
             }
             if (AjouterFin) {
                 TousLesJours.add(fin);
@@ -120,13 +120,13 @@ public class ProgrammeFiltre {
         List<Programme> ProgrammesFiltres = new ArrayList<>();
                 
         for (Programme UnProgramme : ListeProgramme) {
-        	Date début = UnProgramme.getDateDeDebut();
+        	Date debut = UnProgramme.getDateDeDebut();
         	Date fin = UnProgramme.getDateDeFin();
         	
         	
             if (UnProgramme.getChaine().getNom().equals(Chaine)) {
 
-            	if (((début.getYear() == Date.getYear()) && (début.getMonth() == Date.getMonth()) && (début.getDate()== Date.getDate()) ) || ((fin.getYear() == Date.getYear()) && (fin.getMonth() == Date.getMonth()) && (fin.getDate() == Date.getDate() ))) {
+            	if (((debut.getYear() == Date.getYear()) && (debut.getMonth() == Date.getMonth()) && (debut.getDate()== Date.getDate()) ) || ((fin.getYear() == Date.getYear()) && (fin.getMonth() == Date.getMonth()) && (fin.getDate() == Date.getDate() ))) {
             		
             		ProgrammesFiltres.add(UnProgramme);
             		
