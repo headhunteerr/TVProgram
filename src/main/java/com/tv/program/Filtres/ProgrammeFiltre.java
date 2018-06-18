@@ -2,8 +2,6 @@ package com.tv.program.Filtres;
 
 import com.tv.program.model.Chaine;
 import com.tv.program.model.Personne;
-import com.tv.program.model.programmes.Emission;
-import com.tv.program.model.programmes.Film;
 import com.tv.program.model.programmes.Programme;
 
 import java.util.Date;
@@ -13,8 +11,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hamcrest.core.IsEqual;
-import org.hamcrest.core.IsNull;
 
 public class ProgrammeFiltre {
 
@@ -58,8 +54,7 @@ public class ProgrammeFiltre {
     }
 
     public static List<Date> listeJour(List<Programme> ListeProgramme) {
-    
-    //public static void listeJour(List<Programme> ListeProgramme) {
+   
     	boolean AjouterDebut = true;
         boolean AjouterFin = true;
         SimpleDateFormat JourAAjouter1;
@@ -170,7 +165,15 @@ public class ProgrammeFiltre {
     }
     
     public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne) {
-    	return listeEmissionsDate (ListeProgramme, momentDonne, "emission");
+        List<Programme> ProgrammesFiltres = new ArrayList<>();
+
+        for (Programme UnProgramme : ListeProgramme) {
+        		      			     			
+    			if(UnProgramme.getDateDeDebut().before(momentDonne) && UnProgramme.getDateDeFin().after(momentDonne)) {
+    				ProgrammesFiltres.add(UnProgramme);
+    			}      
+        }
+        return ProgrammesFiltres;
     }
   
     public static List<Programme> listeFilmActeur(List<Programme> ListeProgramme, String Acteur_Realisateur) {
