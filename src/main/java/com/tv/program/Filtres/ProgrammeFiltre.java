@@ -15,8 +15,12 @@ import java.util.List;
 public class ProgrammeFiltre {
 
 	
-	//fonction qui retourne tous les programmes du type choisi (Journal, emission, documentaire, ...)
-	//paramètre : liste de tous les programmes, et le Type voulus sous forme d'une chaine de caractère
+	/**
+	 * fonction qui retourne tous les programmes du type choisi (Journal, emission, documentaire, ...)
+	 * @param ListeProgramme liste de tous les programmes
+	 * @param typeProgramme le type voulus sous forme d'une chaine de caractère
+	 * @return ProgrammesFiltres liste de programmes
+	 */
 	public static List<Programme> listeTypeProgramme(List<Programme> ListeProgramme, String typeProgramme){
 		
 		List<Programme> ProgrammesFiltres = new ArrayList<>();  //Liste de retour
@@ -33,8 +37,11 @@ public class ProgrammeFiltre {
 	}
 
 	
-	//fonction qui retourne la liste des chaines disponnibles dans le programme TV
-	//paramètre : liste de tous les programmes
+	/**
+	 * fonction qui retourne la liste des chaines disponnibles dans le programme TV
+	 * @param ListeProgramme une liste de tous les programmes
+	 * @return ToutesLesChaines liste de chaine
+	 */
     public static List<Chaine> listeChaine(List<Programme> ListeProgramme) {
         boolean AjouterChaine = true;
         Chaine ChaineAAjouter;
@@ -61,8 +68,11 @@ public class ProgrammeFiltre {
         return ToutesLesChaines;
     }
 
-    //fonction qui retoune la liste des jours proposant au moins un programme
-	//paramètre : liste de tous les programmes
+    /**
+     * fonction qui retoune la liste des jours proposant au moins un programme
+     * @param ListeProgramme liste de tous les programmes
+     * @return TousLesJours liste de jours
+     */
     public static List<Date> listeJour(List<Programme> ListeProgramme) {
    
     	boolean AjouterDebut = true;
@@ -126,8 +136,13 @@ public class ProgrammeFiltre {
         return TousLesJours;
     }
     
-    //fonction qui retoune la programmation d'une chaine pour un jour donné
-	//paramètre : liste de tous les programmes, la date voulu et le nom de la chaine (chaine de caractère)
+    /**
+     * fonction qui retoune la programmation d'une chaine pour un jour donné
+     * @param ListeProgramme liste de tous les programmes
+     * @param Date la date voulu
+     * @param Chaine le nom de la chaine (chaine de caractère)
+     * @return ProgrammesFiltres une liste de programmes
+     */
     public static List<Programme> listeProgrammeChaine(List<Programme> ListeProgramme, Date Date, String Chaine) {
 
         List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste à retourner
@@ -150,8 +165,13 @@ public class ProgrammeFiltre {
     }
 
         
-    //fonction qui retourne la liste d'un type de programme selectionné en cours de diffusion à un moment choisis
-	//paramètre : liste de tous les programmes, date avec heure et le type du programme (chaine de caractère)
+    /**
+     * fonction qui retourne la liste d'un type de programme selectionné en cours de diffusion à un moment choisis
+     * @param ListeProgramme liste de tous les programmes
+     * @param momentDonne date avec l'heure
+     * @param typeProgramme type du programme (chaine de caractère)
+     * @return ProgrammesFiltres une liste de programmes
+     */
     public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne, String typeProgramme) {
         List<Programme> ProgrammesFiltres = new ArrayList<>(); // liste à retourner
 
@@ -167,9 +187,13 @@ public class ProgrammeFiltre {
         return ProgrammesFiltres;
     }
     
-    //fonction qui retourne la liste des programmes en cours de diffusion à un moment choisis
-	//paramètre : liste de tous les programmes et l'instant voulu (date avec heure)
-    public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne) {
+    /**
+     * fonction qui retourne la liste des programmes en cours de diffusion à un moment choisis
+     * @param ListeProgramme liste de tous les programmes
+     * @param momentDonne l'instant voulu (date avec l'heure)
+     * @return ProgrammesFiltres une liste de programmes
+     */
+	public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne) {
         List<Programme> ProgrammesFiltres = new ArrayList<>();//liste à retourner
 
         for (Programme UnProgramme : ListeProgramme) {
@@ -183,8 +207,12 @@ public class ProgrammeFiltre {
         return ProgrammesFiltres;
     }
   
-    //fonction qui renvois la liste des film dans lesquels une personne est soit acteur soit réalisateur
-	//paramètre : liste de tous les programmes et le nom de la personne (chaine de caractères)
+    /**
+     * fonction qui renvois la liste des film dans lesquels une personne est soit acteur soit réalisateur
+     * @param ListeProgramme liste de tous les programmes
+     * @param Acteur_Realisateur le nom de la personne (chaine de caractères)
+     * @return ProgrammesFiltres une liste de programmes
+     */
     public static List<Programme> listeFilmActeur(List<Programme> ListeProgramme, String Acteur_Realisateur) {
     	List<Programme> ProgrammeFiltres = new ArrayList<>(); //liste à retourer
     	List<Personne> PersonneFilm = new ArrayList<>();
@@ -215,8 +243,12 @@ public class ProgrammeFiltre {
     }
 
 
-    //fonction qui retourne la liste des emissions comportant des mots clés choisis dans leurs déscription
-	//paramètre : liste de tous les programmes et les mots clés de la description (chaine de caractère)
+    /**
+     * fonction qui retourne la liste des emissions comportant des mots clés choisis dans leurs déscription
+     * @param ListeProgramme liste de tous les programmes
+     * @param motCle les mots clés de la description (chaine de caractère)
+     * @return ProgrammesFiltres une liste de programmes
+     */
     public static List<Programme> rechercheMotsCles(List<Programme> ListeProgramme, String motCle) {
         List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste à retourner
 
