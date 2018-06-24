@@ -14,7 +14,9 @@ import javax.xml.stream.events.XMLEvent;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
+/**
+ * Classe permettant de parser des programmes dans un fichier xml
+ */
 class ProgrammeParser implements Parser<Programme> {
     static final String START_ELEMENT_NAME = "programme";
 
@@ -27,6 +29,13 @@ class ProgrammeParser implements Parser<Programme> {
         sdf.setTimeZone(TimeZone.getDefault());
     }
 
+    /**
+     *
+     * @param startElement la balise de debut d'un element programme
+     * @param eventReader un event reader permettant de parcourir le fichier xml
+     * @return la chaine parsé dans le fichier
+     * @throws XMLStreamException en cas d'exception lors de la lecture d'une chaine
+     */
     @Override
     public Programme parseFrom(StartElement startElement, XMLEventReader eventReader) throws XMLStreamException {
         Date start = parseDate(startElement, "start");
@@ -136,6 +145,10 @@ class ProgrammeParser implements Parser<Programme> {
         }
     }
 
+    /**
+     *
+     * @return le nom d'une tag d'un objet de type programme
+     */
     @Override
     public String tagName() {
         return START_ELEMENT_NAME;

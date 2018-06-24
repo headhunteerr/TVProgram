@@ -2,6 +2,9 @@ package com.tv.program.model;
 
 import java.util.Objects;
 
+/**
+ * Classe représentant une persone. Une personne a un nom et un role, une profession.
+ */
 public class Personne {
     private String role;
     private String nom;

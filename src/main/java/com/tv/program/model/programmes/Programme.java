@@ -7,6 +7,13 @@ import com.tv.program.model.Personne;
 import java.util.*;
 import java.util.stream.Stream;
 
+/**
+ * classe represantant un programme. Un programme contient une chaine, un titre, un sous_titre,
+ * une description, un type spécifique (télérealité, ...) une date de début, une date de fin; une duree
+ *  une annee, une liste de personnes ayant contribué à ce programme, un pays un aspect (exemple 16:9)
+ *  une qualite video (exemple HDTV) et une note (exemple tout public). Il contient aussi un champ id
+ *  afin de rendre la comparaison de programmes plus facile
+ */
 public abstract class Programme {
     private static long ID_COUNT = 0;
 
@@ -85,6 +92,10 @@ public abstract class Programme {
 
     public String getDescription() {
         return description;
+    }
+
+    public long getId() {
+        return id;
     }
 
     @Override
