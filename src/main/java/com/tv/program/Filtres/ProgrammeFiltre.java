@@ -15,11 +15,18 @@ import java.util.List;
 public class ProgrammeFiltre {
 
 	
-	
+	/**
+	 * fonction qui retourne tous les programmes du type choisi (Journal, emission, documentaire, ...)
+	 * @param ListeProgramme liste de tous les programmes
+	 * @param typeProgramme le type voulus sous forme d'une chaine de caractère
+	 * @return ProgrammesFiltres liste de programmes
+	 */
 	public static List<Programme> listeTypeProgramme(List<Programme> ListeProgramme, String typeProgramme){
-		List<Programme> ProgrammesFiltres = new ArrayList<>();
+		
+		List<Programme> ProgrammesFiltres = new ArrayList<>();  //Liste de retour
 		
 		for (Programme UnProgramme : ListeProgramme) {
+			//Pour tous les programmes on si leur type est celui voulu et le cas échéant on l'ajoute dans la liste à retourner
     		if (UnProgramme.getType().contains(typeProgramme)) {
     			ProgrammesFiltres.add(UnProgramme);	
     		}       
@@ -29,18 +36,26 @@ public class ProgrammeFiltre {
 		
 	}
 
+	
+	/**
+	 * fonction qui retourne la liste des chaines disponnibles dans le programme TV
+	 * @param ListeProgramme une liste de tous les programmes
+	 * @return ToutesLesChaines liste de chaine
+	 */
     public static List<Chaine> listeChaine(List<Programme> ListeProgramme) {
         boolean AjouterChaine = true;
         Chaine ChaineAAjouter;
-        List<Chaine> ToutesLesChaines = new ArrayList<>();
+        
+        List<Chaine> ToutesLesChaines = new ArrayList<>();  //liste à retourner
 
         for (Programme UnProgramme : ListeProgramme) {
-
+        	//On récupère la chaine de tous les programme
             AjouterChaine = true;
             ChaineAAjouter = UnProgramme.getChaine();
-
+            
             for (Chaine UneChaine : ToutesLesChaines) {
-                if ((UneChaine.getNom() == ChaineAAjouter.getNom()) && (UneChaine.getId() == ChaineAAjouter.getId())) {
+            	//Si la chaine n'est pas dans la liste de retour on l'y ajoute
+                if ((UneChaine.getNom().equals(ChaineAAjouter.getNom()))  && (UneChaine.getId().equals(ChaineAAjouter.getId()))) {
 
                     AjouterChaine = false;
                 }
@@ -53,6 +68,11 @@ public class ProgrammeFiltre {
         return ToutesLesChaines;
     }
 
+    /**
+     * fonction qui retoune la liste des jours proposant au moins un programme
+     * @param ListeProgramme liste de tous les programmes
+     * @return TousLesJours liste de jours
+     */
     public static List<Date> listeJour(List<Programme> ListeProgramme) {
    
     	boolean AjouterDebut = true;
@@ -60,18 +80,20 @@ public class ProgrammeFiltre {
         SimpleDateFormat JourAAjouter1;
         SimpleDateFormat JourAAjouter2;
         
-        List<Date> TousLesJours = new ArrayList<>();
+        List<Date> TousLesJours = new ArrayList<>(); //Liste à retourner
 
         for (Programme UnProgramme : ListeProgramme) {
 
             AjouterDebut = true;
             AjouterFin = true;
             
-            DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+            DateFormat df = new SimpleDateFormat("dd-MM-yyyy"); // Choix du format de la date (dans ce cas sans l'heure)
             
             Date debut = null;
             Date fin = null;
             
+            
+            //On retire l'heure pour ne garder que le jour de diffusion
             try
             
             {            
@@ -85,6 +107,7 @@ public class ProgrammeFiltre {
             
            
             for (Date UnJour : TousLesJours) {
+            	//On vérifi si les jours ne sont pas<déja dans la liste de retour
                 if (UnJour.equals(debut)) {
 
                 	AjouterDebut = false;
@@ -98,7 +121,10 @@ public class ProgrammeFiltre {
                 }
             }
             
+            //Si le programme commence le même jour qu'il termine on n'ajoute la date qu'une seule fois
             AjouterFin = (AjouterFin && !debut.equals(fin));
+            
+            //Ajout dans la lliste des date qui n'y sont pas déja
             if (AjouterDebut) {
                 TousLesJours.add(debut);
             }
@@ -109,20 +135,27 @@ public class ProgrammeFiltre {
         }
         return TousLesJours;
     }
+    
+    /**
+     * fonction qui retoune la programmation d'une chaine pour un jour donné
+     * @param ListeProgramme liste de tous les programmes
+     * @param Date la date voulu
+     * @param Chaine le nom de la chaine (chaine de caractère)
+     * @return ProgrammesFiltres une liste de programmes
+     */
+    public static List<Programme> listeProgrammeChaine(List<Programme> ListeProgramme, Date Date, String Chaine) {
 
-    public static List<Programme> listeProgrammeChaine(String Chaine, Date Date, List<Programme> ListeProgramme) {
-
-        List<Programme> ProgrammesFiltres = new ArrayList<>();
+        List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste à retourner
                 
         for (Programme UnProgramme : ListeProgramme) {
-        	Date debut = UnProgramme.getDateDeDebut();
-        	Date fin = UnProgramme.getDateDeFin();
-        	
-        	
+        	       	
             if (UnProgramme.getChaine().getNom().equals(Chaine)) {
+            	//Si je progamme est sur la chaine voule, on récupère la date de début et de fin de tous les ptogramme
+            	Date debut = UnProgramme.getDateDeDebut();
+            	Date fin = UnProgramme.getDateDeFin();
 
             	if (((debut.getYear() == Date.getYear()) && (debut.getMonth() == Date.getMonth()) && (debut.getDate()== Date.getDate()) ) || ((fin.getYear() == Date.getYear()) && (fin.getMonth() == Date.getMonth()) && (fin.getDate() == Date.getDate() ))) {
-            		
+            		//Si je jour de diffusion correspond au jour voulu, on ajoute le programme à la liste à retourner
             		ProgrammesFiltres.add(UnProgramme);
             		
             	}
@@ -131,30 +164,20 @@ public class ProgrammeFiltre {
         return ProgrammesFiltres;
     }
 
-    
-    
-    /*public static List<Programme> ficheEmission(List<Programme> ListeProgramme, Chaine Chaine) {
-        List<Programme> ProgrammesFiltres = new ArrayList<>();
-
-        for (Programme UnProgramme : ListeProgramme) {
-            if (UnProgramme.getChaine() == Chaine) {
-
-                ProgrammesFiltres.add(UnProgramme);
-            }
-        }
-        return ProgrammesFiltres;
-    }
-
-    
-    */
-    
-    
+        
+    /**
+     * fonction qui retourne la liste d'un type de programme selectionné en cours de diffusion à un moment choisis
+     * @param ListeProgramme liste de tous les programmes
+     * @param momentDonne date avec l'heure
+     * @param typeProgramme type du programme (chaine de caractère)
+     * @return ProgrammesFiltres une liste de programmes
+     */
     public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne, String typeProgramme) {
-        List<Programme> ProgrammesFiltres = new ArrayList<>();
+        List<Programme> ProgrammesFiltres = new ArrayList<>(); // liste à retourner
 
         for (Programme UnProgramme : ListeProgramme) {
         		if (UnProgramme.getType().contains(typeProgramme)) {
-        			     			
+        			//Si le programme à le bon type et qu'il commence avant et se termine après le moment choisis, on l'ajoute à la liste des programmes en cours de diffusion
         			if(UnProgramme.getDateDeDebut().before(momentDonne) && UnProgramme.getDateDeFin().after(momentDonne)) {
         				ProgrammesFiltres.add(UnProgramme);
         			}
@@ -164,30 +187,46 @@ public class ProgrammeFiltre {
         return ProgrammesFiltres;
     }
     
-    public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne) {
-        List<Programme> ProgrammesFiltres = new ArrayList<>();
+    /**
+     * fonction qui retourne la liste des programmes en cours de diffusion à un moment choisis
+     * @param ListeProgramme liste de tous les programmes
+     * @param momentDonne l'instant voulu (date avec l'heure)
+     * @return ProgrammesFiltres une liste de programmes
+     */
+	public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne) {
+        List<Programme> ProgrammesFiltres = new ArrayList<>();//liste à retourner
 
         for (Programme UnProgramme : ListeProgramme) {
         		      			     			
     			if(UnProgramme.getDateDeDebut().before(momentDonne) && UnProgramme.getDateDeFin().after(momentDonne)) {
+    				//Si le programme commence avant et se termine après le moment choisis, on l'ajoute à la liste des programmes en cours de diffusion
+        			
     				ProgrammesFiltres.add(UnProgramme);
     			}      
         }
         return ProgrammesFiltres;
     }
   
+    /**
+     * fonction qui renvois la liste des film dans lesquels une personne est soit acteur soit réalisateur
+     * @param ListeProgramme liste de tous les programmes
+     * @param Acteur_Realisateur le nom de la personne (chaine de caractères)
+     * @return ProgrammesFiltres une liste de programmes
+     */
     public static List<Programme> listeFilmActeur(List<Programme> ListeProgramme, String Acteur_Realisateur) {
-    	List<Programme> ProgrammeFiltres = new ArrayList<>();
+    	List<Programme> ProgrammeFiltres = new ArrayList<>(); //liste à retourer
     	List<Personne> PersonneFilm = new ArrayList<>();
     	boolean ajouterFilm;
         
         for (Programme UnProgramme : ListeProgramme) {
         	ajouterFilm = false;
             if (UnProgramme.getType().contains("film")) {
+            	
+            	//Pour chaque film, on ajoute toutes les personnes ayant un rapport avec le film dans une liste
 	        	PersonneFilm.addAll(UnProgramme.getCredits());
 	        	
 	        	for (Personne UnePersonne : PersonneFilm) {
-	        		
+	        		//si cette liste contient la personne choisis avec le rôle d'acteur ou de réalisateur, on ajoute le film à la liste 
 	        		if((UnePersonne.getNom().equals(Acteur_Realisateur)) && ((UnePersonne.getRole().equals("actor")) || (UnePersonne.getRole().equals("director")))) {
 	        			ajouterFilm = true;
 	        		}
@@ -195,6 +234,7 @@ public class ProgrammeFiltre {
 	        	if (ajouterFilm) {
 	        		ProgrammeFiltres.add(UnProgramme);
 	        	}
+	        	//on vide la liste des personnes car on passe au film suivant
 	        	PersonneFilm.clear();
             }		
         }
@@ -203,42 +243,22 @@ public class ProgrammeFiltre {
     }
 
 
-
-
-
-/*
-    public static List<Personne> listeActeurs(List<Programme> ListeProgramme, Chaine Chaine) {
-        List<Personne> PersonneFiltres = new ArrayList<>();
-
-        for (Programme UnProgramme : ListeProgramme) {
-            if (UnProgramme.getChaine() == Chaine) {
-
-            	PersonneFiltres.addAll(UnProgramme.getCredits());
-            }
-        }
-        return PersonneFiltres;
-    }
-
-    public static List<Personne> nombreEmisionsParJour(List<Programme> ListeProgramme, Chaine Chaine) {
-        List<Personne> PersonneFiltres = new ArrayList<>();
-        //List<>
-        
-        for (Programme UnProgramme : ListeProgramme) {
-            if (UnProgramme.getChaine() == Chaine) {
-
-            	//PersonneFiltres.add(UnProgramme);
-            }
-        }
-        return PersonneFiltres;
-    }*/
-
+    /**
+     * fonction qui retourne la liste des emissions comportant des mots clés choisis dans leurs déscription
+     * @param ListeProgramme liste de tous les programmes
+     * @param motCle les mots clés de la description (chaine de caractère)
+     * @return ProgrammesFiltres une liste de programmes
+     */
     public static List<Programme> rechercheMotsCles(List<Programme> ListeProgramme, String motCle) {
-        List<Programme> ProgrammesFiltres = new ArrayList<>();
+        List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste à retourner
 
         for (Programme UnProgramme : ListeProgramme) {
         	if (UnProgramme.getType().contains("emission")) {
+        		//Pour toutes les emissions
         		if (UnProgramme.getDescription() != null) {
+        			//si elles ont une description
 		            if (UnProgramme.getDescription().contains(motCle)) {
+		            	//Et que la description contient les mots clé, on ajoute l'emission à la liste
 		                ProgrammesFiltres.add(UnProgramme);
 		            }
         		}

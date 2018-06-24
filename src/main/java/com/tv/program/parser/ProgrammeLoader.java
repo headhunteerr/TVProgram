@@ -16,6 +16,12 @@ import java.util.Map;
 
 public class ProgrammeLoader {
 
+    /**
+     * charge les chaines et programmes d'un fichier xml dans les listes passées en arguments
+     * @param xmlStream le fichier xml sous forme d'inputStream
+     * @param chaines la liste de chaines qui va stocker les chaines parsées
+     * @param programmes la liste de programmes qui va stocker les programmes parsées
+     */
     public static void load(InputStream xmlStream, List<Chaine> chaines, List<Programme> programmes) {
         XMLEventReader xmlEventReader;
         try {
@@ -54,6 +60,10 @@ public class ProgrammeLoader {
         }
     }
 
+    /**
+     * iterateur d'un parseur d'objet
+     * @param <T> le type d'objet a etre parsé
+     */
     private static class ParsingStreamIterator<T> implements Iterator<T> {
         private StartElement startElement;
         private XMLEventReader xmlEventReader;

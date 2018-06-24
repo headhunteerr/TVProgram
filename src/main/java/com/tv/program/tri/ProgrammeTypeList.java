@@ -5,6 +5,9 @@ import com.tv.program.model.programmes.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe containeur d'objet utilisée pour traiter les types d'émissions par periode.
+ */
 public class ProgrammeTypeList {
     List<Autre> autres;
     List<Classique> classiques;

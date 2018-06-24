@@ -68,16 +68,14 @@ public class TestFiltres {
         //System.out.println(String.format("Il y a %d chaines et %d programmes", chaines.size(), programmes.size()));
         //System.out.println(ProgrammeFiltre.listeChaine(programmes));
         //System.out.println(ProgrammeFiltre.listeJour(programmes));
-        //System.out.println(ProgrammeFiltre.listeProgrammeChaine("France 3", date, programmes));
-        System.out.println(ProgrammeFiltre.listeEmissionsDate(programmes, date));
+        System.out.println(ProgrammeFiltre.listeProgrammeChaine(programmes, date, "France 3"));
+        //System.out.println(ProgrammeFiltre.listeEmissionsDate(programmes, date));
         //System.out.println(ProgrammeFiltre.listeFilmActeur(programmes, "Emmanuel Rigaut"));
         //System.out.println(ProgrammeFiltre.listeTypeProgramme(programmes, "emission"));
         //System.out.println(ProgrammeFiltre.rechercheMotsCles(programmes, "question"));
         
         //System.out.println(programmes);
-        
-        //ProgrammeFiltre.listeProgrammeChaine("France 3", date, programmes);
-       
+           
                 
         
 	 }
