@@ -9,9 +9,19 @@ import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
+/**
+ * Classe permettant de parser des chaines dans un fichier xml
+ */
 class ChaineParser implements Parser<Chaine> {
     static final String START_ELEMENT_NAME = "channel";
 
+    /**
+     *
+     * @param startElement la balise de debut d'un element channel
+     * @param eventReader un event reader permettant de parcourir le fichier xml
+     * @return la chaine parsé dans le fichier
+     * @throws XMLStreamException en cas d'exception lors de la lecture d'une chaine
+     */
     @Override
     public Chaine parseFrom(StartElement startElement, XMLEventReader eventReader) throws XMLStreamException {
         String id = startElement.getAttributeByName(new QName("id"))
@@ -39,6 +49,11 @@ class ChaineParser implements Parser<Chaine> {
         throw new ParsingException("Le fichier est mal formatté");
     }
 
+
+    /**
+     *
+     * @return le nom d'une tag d'un objet de type chaine
+     */
     @Override
     public String tagName() {
         return START_ELEMENT_NAME;

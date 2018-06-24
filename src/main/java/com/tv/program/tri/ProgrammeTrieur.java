@@ -5,6 +5,9 @@ import com.tv.program.model.programmes.*;
 
 import java.util.*;
 
+/**
+ * Classe utilisée pour ordonner une liste d'objet selon un certain critre
+ */
 public class ProgrammeTrieur {
     private final static Comparator<Programme> PAR_DATE_DE_DEBUT =
             Comparator.comparing(Programme::getDateDeDebut);
@@ -33,38 +36,74 @@ public class ProgrammeTrieur {
     private final static Comparator<Programme> PAR_QUALITE =
             Comparator.comparing(Programme::getQualite);
 
+    /**
+     * Tri les programmes par leurs date de début.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParDateDeDebut(List<Programme> programmes) {
         programmes.sort(PAR_DATE_DE_DEBUT);
     }
 
+    /**
+     * Tri les programmes par leurs date de fin.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParDateDeFin(List<Programme> programmes) {
         programmes.sort(PAR_DATE_DE_FIN);
     }
 
+    /**
+     * Tri les programmes par l'ordre alphabetique.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParTitre(List<Programme> programmes) {
         programmes.sort(PAR_TITRE);
     }
 
+    /**
+     * Tri les programmes par leurs annee.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParAnnee(List<Programme> programmes) {
         programmes.sort(PAR_ANNEE);
     }
 
+    /**
+     * Tri les programmes par leurs pays.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParPays(List<Programme> programmes) {
         programmes.sort(PAR_PAYS);
     }
 
+    /**
+     * Tri les programmes par leurs type.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParType(List<Programme> programmes) {
         programmes.sort(PAR_TYPE);
     }
 
+    /**
+     * Tri les programmes par leurs duree.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParDuree(List<Programme> programmes) {
         programmes.sort(PAR_DUREE);
     }
 
+    /**
+     * Tri les programmes par leurs aspect.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParAspect(List<Programme> programmes) {
         programmes.sort(PAR_ASPECT);
     }
 
+    /**
+     * Tri les programmes par leurs qualite.
+     * @param programmes la liste de programme a trier
+     */
     public static void trierParQualitee(List<Programme> programmes) {
         programmes.sort(PAR_QUALITE);
     }

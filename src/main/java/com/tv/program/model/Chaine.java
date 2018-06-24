@@ -2,6 +2,9 @@ package com.tv.program.model;
 
 import java.util.Objects;
 
+/**
+ * classe representant une chaine
+ */
 public class Chaine {
     private final String nom, id;
 

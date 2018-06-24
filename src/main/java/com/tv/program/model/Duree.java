@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Classe representant une duree
+ */
 public class Duree implements Comparable<Duree> {
     private final static Map<String, TimeUnit> TIME_UNIT_MAP;
 
