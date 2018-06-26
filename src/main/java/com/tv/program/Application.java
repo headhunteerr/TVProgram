@@ -5,9 +5,6 @@ import com.tv.program.model.Chaine;
 import com.tv.program.model.programmes.Programme;
 import com.tv.program.parser.ProgrammeLoader;
 
-import com.tv.program.windows.FenetreChaines;
-import com.tv.program.windows.FenetreListeJours;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,6 +31,7 @@ public class Application{
         commands.add("joursProgrammes");
         commands.add("listeProgrammes");
         commands.add("infosEmission");
+        commands.add("emissionsAuMoment");
         commands.add("quit");
 
         commands = Collections.unmodifiableList(commands);
@@ -59,8 +57,11 @@ public class Application{
         System.out.println("// Liste des commandes:\n" +
                 "// chaines : liste toutes les chaines contenues dans le programme TV \n" +
                 "// joursProgrammes : liste de tous les jours disposant d'un programme TV \n" +
-                "// quit : quitter l'application \n" +
-                "// listeProgrammes -'chaine' -jj/mm/aaaa : liste des programmes sur la chaine 'chaine' a la date choisie \n"
+                "// listeProgrammes -'chaine' -jj/mm/aaaa : liste des programmes sur la chaine 'chaine' a la date choisie \n" +
+                "// infosEmission -'emission' : affiche les informations sur l'emission donnee en parametre\n" +
+                "// emissionsAuMoment jj/mm/aaaa hh:mm : liste les emissions diffusees au moment donne en parametre\n" +
+                "// quit : quitter l'application \n"
+
         );
 
     }
@@ -86,19 +87,20 @@ public class Application{
         }
         String chaine = commandTab[1];
         String[] dateString = commandTab[2].split("/");
-        for(String string:dateString){
-            System.out.println(string);
-        }
         int[] dateInts = new int[dateString.length];
         for(int i = 0; i < dateString.length; i++){
             dateInts[i] = Integer.parseInt(dateString[i]);
         }
-        if (dateInts[2]>0 && (dateInts[1]>0 && dateInts[2]<=12) && (dateInts[0]>0 && dateInts[0]<=31)) {
-            Date date = new Date(dateInts[2], dateInts[1], dateInts[0], 0, 0);
+        if (dateInts[2]>0 && (dateInts[1]>0 && dateInts[1]<=12) && (dateInts[0]>0 && dateInts[0]<=31)) {
+            Date date = new Date(dateInts[2]-1900, dateInts[1], dateInts[0]);
+            System.out.println(date.toString());
             List<Programme> programmes = ProgrammeFiltre.listeProgrammeChaine(this.getProgrammes(), date, chaine);
             for (Programme p : programmes) {
                 p.toString();
             }
+        }
+        else{
+            System.out.println("** Date incorrecte! **");
         }
     }
 
@@ -107,7 +109,32 @@ public class Application{
         for(int i = 0; i <commandTab.length; i++){
             commandTab[i] = commandTab[i].trim();
         }
+    }
 
+    public void printCurrentBroadcasts(String command){
+        String[] commandTab = command.split(" ");
+
+        String[] dateString = commandTab[1].split("/");
+        int[] dateInts = new int[dateString.length];
+        for(int i = 0; i < dateString.length; i++){
+            dateInts[i] = Integer.parseInt(dateString[i]);
+        }
+
+        String[] hourString = commandTab[2].split(":");
+        int[] hourInts = new int[hourString.length];
+        for (int i = 0; i < hourString.length; i++){
+            hourInts[i] = Integer.parseInt(hourString[i]);
+        }
+        if (dateInts[2]>0 && (dateInts[1]>0 && dateInts[1]<=12) && (dateInts[0]>0 && dateInts[0]<=31) && (hourInts[0]>=0 && hourInts[0]<24) && (hourInts[1]>=0 && hourInts[1]<60)) {
+            Date date = new Date(dateInts[2]-1900, dateInts[1], dateInts[0], hourInts[0], hourInts[1]);
+            List<Programme> programmes = ProgrammeFiltre.listeEmissionsDate(this.programmes,date);
+            for (Programme p : programmes){
+                p.toString();
+            }
+        }
+        else{
+            System.out.println("** Date incorrecte! **");
+        }
     }
 
     public void stop(){
@@ -141,7 +168,9 @@ public class Application{
 
                     case 4: a.printBrodcastInfo(commandString);break;
 
-                    case 5: a.stop();break;
+                    case 5: a.printCurrentBroadcasts(commandString);break;
+
+                    case 6: a.stop();break;
                 }
             }
             else{
