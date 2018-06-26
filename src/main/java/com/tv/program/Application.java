@@ -2,8 +2,10 @@ package com.tv.program;
 
 import com.tv.program.Filtres.ProgrammeFiltre;
 import com.tv.program.model.Chaine;
+import com.tv.program.model.Personne;
 import com.tv.program.model.programmes.Programme;
 import com.tv.program.parser.ProgrammeLoader;
+import com.tv.program.tri.ProgrammeTrieur;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,7 +38,7 @@ public class Application{
         commands.add("emissionsAuMoment");
         commands.add("filmsDeAvec");
         commands.add("listeActeursOrdonnee");
-        commands.add("");
+        commands.add("nbEmissionsParType");
         commands.add("rechercher");
         commands.add("quit");
 
@@ -67,9 +69,9 @@ public class Application{
                 "// infosEmission /'emission' : affiche les informations sur l'emission donnee en parametre\n" +
                 "// emissionsAuMoment -jj/mm/aaaa hh:mm : liste les emissions diffusees au moment donne en parametre\n" +
                 "// filmsDeAvec /'nom' : liste les films d'un acteur ou d'un realisateur\n" +
-                "//\n" +
-                "//\n" +
-                "//rechercher /'motCle1' 'motCle2'... : affiche la liste de programmes qui contiennent les mots cles dans leurs descriptions\n" +
+                "// acteursParApparition : liste les ateurs ordonnes par leur nombre d'apparition,s dans des films\n" +
+                "// nbEmissionsParType -jj/mm/aaaa -jj/mm/aaaa : affiche le nombre d'emissions de chaque type par jour et sur la periode\n" +
+                "// rechercher /'motCle1' 'motCle2'... : affiche la liste de programmes qui contiennent les mots cles dans leurs descriptions\n" +
                 "// quit : quitter l'application \n"
 
         );
@@ -151,6 +153,36 @@ public class Application{
         }
     }
 
+    public void acteursApparition(){
+        for(Map.Entry<Personne, Integer> map: ProgrammeTrieur.acteursParApparition(this.programmes)){
+            System.out.println(map.getKey().getNom());
+        }
+    }
+
+    public void nbEmissionParType(String command){
+        String[] commandTab = command.split("-");
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        sdf.setTimeZone(TimeZone.getDefault());
+        Date dateDebut = new Date();
+        try {
+            dateDebut = sdf.parse(commandTab[1]);
+        }
+        catch (ParseException e){
+            System.out.println("** Date incorrecte! **");
+        }
+        Date dateFin = new Date();
+        try {
+            dateFin = sdf.parse(commandTab[2]);
+        }
+        catch (ParseException e){
+            System.out.println("** Date incorrecte! **");
+        }
+
+        Object o = ProgrammeTrieur.emissionByPeriode(this.programmes,dateDebut,dateFin);
+        System.out.println(o.toString());
+    }
+
     public void search(String command){
         String[] commandTab = command.split("/");
         String[] keyWords = commandTab[1].split(" ");
@@ -200,9 +232,9 @@ public class Application{
 
                     case 6: a.printMoviesPerson(commandString);break;
 
-                    case 7: break;
+                    case 7: a.acteursApparition();break;
 
-                    case 8: break;
+                    case 8: a.nbEmissionParType(commandString);break;
 
                     case 9: a.search(commandString);break;
 
