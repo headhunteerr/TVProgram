@@ -18,7 +18,7 @@ public class ProgrammeFiltre {
 	/**
 	 * fonction qui retourne tous les programmes du type choisi (Journal, emission, documentaire, ...)
 	 * @param ListeProgramme liste de tous les programmes
-	 * @param typeProgramme le type voulus sous forme d'une chaine de caractère
+	 * @param typeProgramme le type voulus sous forme d'une chaine de caractï¿½re
 	 * @return ProgrammesFiltres liste de programmes
 	 */
 	public static List<Programme> listeTypeProgramme(List<Programme> ListeProgramme, String typeProgramme){
@@ -26,7 +26,7 @@ public class ProgrammeFiltre {
 		List<Programme> ProgrammesFiltres = new ArrayList<>();  //Liste de retour
 		
 		for (Programme UnProgramme : ListeProgramme) {
-			//Pour tous les programmes on si leur type est celui voulu et le cas échéant on l'ajoute dans la liste à retourner
+			//Pour tous les programmes on si leur type est celui voulu et le cas ï¿½chï¿½ant on l'ajoute dans la liste ï¿½ retourner
     		if (UnProgramme.getType().contains(typeProgramme)) {
     			ProgrammesFiltres.add(UnProgramme);	
     		}       
@@ -46,10 +46,10 @@ public class ProgrammeFiltre {
         boolean AjouterChaine = true;
         Chaine ChaineAAjouter;
         
-        List<Chaine> ToutesLesChaines = new ArrayList<>();  //liste à retourner
+        List<Chaine> ToutesLesChaines = new ArrayList<>();  //liste ï¿½ retourner
 
         for (Programme UnProgramme : ListeProgramme) {
-        	//On récupère la chaine de tous les programme
+        	//On rï¿½cupï¿½re la chaine de tous les programme
             AjouterChaine = true;
             ChaineAAjouter = UnProgramme.getChaine();
             
@@ -80,7 +80,7 @@ public class ProgrammeFiltre {
         SimpleDateFormat JourAAjouter1;
         SimpleDateFormat JourAAjouter2;
         
-        List<Date> TousLesJours = new ArrayList<>(); //Liste à retourner
+        List<Date> TousLesJours = new ArrayList<>(); //Liste ï¿½ retourner
 
         for (Programme UnProgramme : ListeProgramme) {
 
@@ -107,7 +107,7 @@ public class ProgrammeFiltre {
             
            
             for (Date UnJour : TousLesJours) {
-            	//On vérifi si les jours ne sont pas<déja dans la liste de retour
+            	//On vï¿½rifi si les jours ne sont pas<dï¿½ja dans la liste de retour
                 if (UnJour.equals(debut)) {
 
                 	AjouterDebut = false;
@@ -121,10 +121,10 @@ public class ProgrammeFiltre {
                 }
             }
             
-            //Si le programme commence le même jour qu'il termine on n'ajoute la date qu'une seule fois
+            //Si le programme commence le mï¿½me jour qu'il termine on n'ajoute la date qu'une seule fois
             AjouterFin = (AjouterFin && !debut.equals(fin));
             
-            //Ajout dans la lliste des date qui n'y sont pas déja
+            //Ajout dans la lliste des date qui n'y sont pas dï¿½ja
             if (AjouterDebut) {
                 TousLesJours.add(debut);
             }
@@ -137,25 +137,25 @@ public class ProgrammeFiltre {
     }
     
     /**
-     * fonction qui retoune la programmation d'une chaine pour un jour donné
+     * fonction qui retoune la programmation d'une chaine pour un jour donnï¿½
      * @param ListeProgramme liste de tous les programmes
-     * @param Date la date voulu
-     * @param Chaine le nom de la chaine (chaine de caractère)
+     * @param date la date voulu
+     * @param Chaine le nom de la chaine (chaine de caractï¿½re)
      * @return ProgrammesFiltres une liste de programmes
      */
-    public static List<Programme> listeProgrammeChaine(List<Programme> ListeProgramme, Date Date, String Chaine) {
+    public static List<Programme> listeProgrammeChaine(List<Programme> ListeProgramme, Date date, String Chaine) {
 
-        List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste à retourner
+        List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste ï¿½ retourner
                 
         for (Programme UnProgramme : ListeProgramme) {
         	       	
             if (UnProgramme.getChaine().getNom().equals(Chaine)) {
-            	//Si je progamme est sur la chaine voule, on récupère la date de début et de fin de tous les ptogramme
+            	//Si je progamme est sur la chaine voule, on rï¿½cupï¿½re la date de dï¿½but et de fin de tous les ptogramme
             	Date debut = UnProgramme.getDateDeDebut();
             	Date fin = UnProgramme.getDateDeFin();
 
-            	if (((debut.getYear() == Date.getYear()) && (debut.getMonth() == Date.getMonth()) && (debut.getDate()== Date.getDate()) ) || ((fin.getYear() == Date.getYear()) && (fin.getMonth() == Date.getMonth()) && (fin.getDate() == Date.getDate() ))) {
-            		//Si je jour de diffusion correspond au jour voulu, on ajoute le programme à la liste à retourner
+            	if (((debut.getYear() == date.getYear()) && (debut.getMonth() == date.getMonth()) && (debut.getDate()== date.getDate()) ) || ((fin.getYear() == date.getYear()) && (fin.getMonth() == date.getMonth()) && (fin.getDate() == date.getDate() ))) {
+            		//Si je jour de diffusion correspond au jour voulu, on ajoute le programme ï¿½ la liste ï¿½ retourner
             		ProgrammesFiltres.add(UnProgramme);
             		
             	}
@@ -166,18 +166,18 @@ public class ProgrammeFiltre {
 
         
     /**
-     * fonction qui retourne la liste d'un type de programme selectionné en cours de diffusion à un moment choisis
+     * fonction qui retourne la liste d'un type de programme selectionnï¿½ en cours de diffusion ï¿½ un moment choisis
      * @param ListeProgramme liste de tous les programmes
      * @param momentDonne date avec l'heure
-     * @param typeProgramme type du programme (chaine de caractère)
+     * @param typeProgramme type du programme (chaine de caractï¿½re)
      * @return ProgrammesFiltres une liste de programmes
      */
     public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne, String typeProgramme) {
-        List<Programme> ProgrammesFiltres = new ArrayList<>(); // liste à retourner
+        List<Programme> ProgrammesFiltres = new ArrayList<>(); // liste ï¿½ retourner
 
         for (Programme UnProgramme : ListeProgramme) {
         		if (UnProgramme.getType().contains(typeProgramme)) {
-        			//Si le programme à le bon type et qu'il commence avant et se termine après le moment choisis, on l'ajoute à la liste des programmes en cours de diffusion
+        			//Si le programme ï¿½ le bon type et qu'il commence avant et se termine aprï¿½s le moment choisis, on l'ajoute ï¿½ la liste des programmes en cours de diffusion
         			if(UnProgramme.getDateDeDebut().before(momentDonne) && UnProgramme.getDateDeFin().after(momentDonne)) {
         				ProgrammesFiltres.add(UnProgramme);
         			}
@@ -188,18 +188,18 @@ public class ProgrammeFiltre {
     }
     
     /**
-     * fonction qui retourne la liste des programmes en cours de diffusion à un moment choisis
+     * fonction qui retourne la liste des programmes en cours de diffusion ï¿½ un moment choisis
      * @param ListeProgramme liste de tous les programmes
      * @param momentDonne l'instant voulu (date avec l'heure)
      * @return ProgrammesFiltres une liste de programmes
      */
 	public static List<Programme> listeEmissionsDate(List<Programme> ListeProgramme, Date momentDonne) {
-        List<Programme> ProgrammesFiltres = new ArrayList<>();//liste à retourner
+        List<Programme> ProgrammesFiltres = new ArrayList<>();//liste ï¿½ retourner
 
         for (Programme UnProgramme : ListeProgramme) {
         		      			     			
     			if(UnProgramme.getDateDeDebut().before(momentDonne) && UnProgramme.getDateDeFin().after(momentDonne)) {
-    				//Si le programme commence avant et se termine après le moment choisis, on l'ajoute à la liste des programmes en cours de diffusion
+    				//Si le programme commence avant et se termine aprï¿½s le moment choisis, on l'ajoute ï¿½ la liste des programmes en cours de diffusion
         			
     				ProgrammesFiltres.add(UnProgramme);
     			}      
@@ -208,13 +208,13 @@ public class ProgrammeFiltre {
     }
   
     /**
-     * fonction qui renvois la liste des film dans lesquels une personne est soit acteur soit réalisateur
+     * fonction qui renvois la liste des film dans lesquels une personne est soit acteur soit rï¿½alisateur
      * @param ListeProgramme liste de tous les programmes
-     * @param Acteur_Realisateur le nom de la personne (chaine de caractères)
+     * @param Acteur_Realisateur le nom de la personne (chaine de caractï¿½res)
      * @return ProgrammesFiltres une liste de programmes
      */
     public static List<Programme> listeFilmActeur(List<Programme> ListeProgramme, String Acteur_Realisateur) {
-    	List<Programme> ProgrammeFiltres = new ArrayList<>(); //liste à retourer
+    	List<Programme> ProgrammeFiltres = new ArrayList<>(); //liste ï¿½ retourer
     	List<Personne> PersonneFilm = new ArrayList<>();
     	boolean ajouterFilm;
         
@@ -226,7 +226,7 @@ public class ProgrammeFiltre {
 	        	PersonneFilm.addAll(UnProgramme.getCredits());
 	        	
 	        	for (Personne UnePersonne : PersonneFilm) {
-	        		//si cette liste contient la personne choisis avec le rôle d'acteur ou de réalisateur, on ajoute le film à la liste 
+	        		//si cette liste contient la personne choisis avec le rï¿½le d'acteur ou de rï¿½alisateur, on ajoute le film ï¿½ la liste 
 	        		if((UnePersonne.getNom().equals(Acteur_Realisateur)) && ((UnePersonne.getRole().equals("actor")) || (UnePersonne.getRole().equals("director")))) {
 	        			ajouterFilm = true;
 	        		}
@@ -244,13 +244,13 @@ public class ProgrammeFiltre {
 
 
     /**
-     * fonction qui retourne la liste des emissions comportant des mots clés choisis dans leurs déscription
+     * fonction qui retourne la liste des emissions comportant des mots clï¿½s choisis dans leurs dï¿½scription
      * @param ListeProgramme liste de tous les programmes
-     * @param motCle les mots clés de la description (chaine de caractère)
+     * @param motCle les mots clï¿½s de la description (chaine de caractï¿½re)
      * @return ProgrammesFiltres une liste de programmes
      */
     public static List<Programme> rechercheMotsCles(List<Programme> ListeProgramme, String motCle) {
-        List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste à retourner
+        List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste ï¿½ retourner
 
         for (Programme UnProgramme : ListeProgramme) {
         	if (UnProgramme.getType().contains("emission")) {
@@ -258,7 +258,7 @@ public class ProgrammeFiltre {
         		if (UnProgramme.getDescription() != null) {
         			//si elles ont une description
 		            if (UnProgramme.getDescription().contains(motCle)) {
-		            	//Et que la description contient les mots clé, on ajoute l'emission à la liste
+		            	//Et que la description contient les mots clï¿½, on ajoute l'emission ï¿½ la liste
 		                ProgrammesFiltres.add(UnProgramme);
 		            }
         		}
