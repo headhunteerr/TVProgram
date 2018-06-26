@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Application{
@@ -32,6 +34,10 @@ public class Application{
         commands.add("listeProgrammes");
         commands.add("infosEmission");
         commands.add("emissionsAuMoment");
+        commands.add("filmsDeAvec");
+        commands.add("listeActeursOrdonnee");
+        commands.add("");
+        commands.add("rechercher");
         commands.add("quit");
 
         commands = Collections.unmodifiableList(commands);
@@ -58,8 +64,12 @@ public class Application{
                 "// chaines : liste toutes les chaines contenues dans le programme TV \n" +
                 "// joursProgrammes : liste de tous les jours disposant d'un programme TV \n" +
                 "// listeProgrammes -'chaine' -jj/mm/aaaa : liste des programmes sur la chaine 'chaine' a la date choisie \n" +
-                "// infosEmission -'emission' : affiche les informations sur l'emission donnee en parametre\n" +
-                "// emissionsAuMoment jj/mm/aaaa hh:mm : liste les emissions diffusees au moment donne en parametre\n" +
+                "// infosEmission /'emission' : affiche les informations sur l'emission donnee en parametre\n" +
+                "// emissionsAuMoment -jj/mm/aaaa hh:mm : liste les emissions diffusees au moment donne en parametre\n" +
+                "// filmsDeAvec /'nom' : liste les films d'un acteur ou d'un realisateur\n" +
+                "//\n" +
+                "//\n" +
+                "//rechercher /'motCle1' 'motCle2'... : affiche la liste de programmes qui contiennent les mots cles dans leurs descriptions\n" +
                 "// quit : quitter l'application \n"
 
         );
@@ -86,56 +96,74 @@ public class Application{
             commandTab[i] = commandTab[i].trim();
         }
         String chaine = commandTab[1];
-        String[] dateString = commandTab[2].split("/");
-        int[] dateInts = new int[dateString.length];
-        for(int i = 0; i < dateString.length; i++){
-            dateInts[i] = Integer.parseInt(dateString[i]);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        sdf.setTimeZone(TimeZone.getDefault());
+        Date date = new Date();
+        try {
+           date = sdf.parse(commandTab[2]);
         }
-        if (dateInts[2]>0 && (dateInts[1]>0 && dateInts[1]<=12) && (dateInts[0]>0 && dateInts[0]<=31)) {
-            Date date = new Date(dateInts[2]-1900, dateInts[1], dateInts[0]);
-            System.out.println(date.toString());
-            List<Programme> programmes = ProgrammeFiltre.listeProgrammeChaine(this.getProgrammes(), date, chaine);
-            for (Programme p : programmes) {
-                p.toString();
-            }
-        }
-        else{
+        catch (ParseException e){
             System.out.println("** Date incorrecte! **");
+        }
+        List<Programme> programmes = ProgrammeFiltre.listeProgrammeChaine(this.getProgrammes(), date, chaine);
+        for (Programme p : programmes) {
+            System.out.println(p.toString());
         }
     }
 
     public void printBrodcastInfo(String command){
-        String[] commandTab = command.split("-");
-        for(int i = 0; i <commandTab.length; i++){
-            commandTab[i] = commandTab[i].trim();
+        String[] commandTab = command.split("/");
+
+        for (Programme p : this.programmes){
+            if (p.getTitre().equals(commandTab[1])){
+                System.out.println(p.toString());
+                break;
+            }
         }
     }
 
     public void printCurrentBroadcasts(String command){
-        String[] commandTab = command.split(" ");
+        String[] commandTab = command.split("-");
 
-        String[] dateString = commandTab[1].split("/");
-        int[] dateInts = new int[dateString.length];
-        for(int i = 0; i < dateString.length; i++){
-            dateInts[i] = Integer.parseInt(dateString[i]);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        sdf.setTimeZone(TimeZone.getDefault());
+        Date date = new Date();
+        try {
+            date = sdf.parse(commandTab[1]);
         }
-
-        String[] hourString = commandTab[2].split(":");
-        int[] hourInts = new int[hourString.length];
-        for (int i = 0; i < hourString.length; i++){
-            hourInts[i] = Integer.parseInt(hourString[i]);
-        }
-        if (dateInts[2]>0 && (dateInts[1]>0 && dateInts[1]<=12) && (dateInts[0]>0 && dateInts[0]<=31) && (hourInts[0]>=0 && hourInts[0]<24) && (hourInts[1]>=0 && hourInts[1]<60)) {
-            Date date = new Date(dateInts[2]-1900, dateInts[1], dateInts[0], hourInts[0], hourInts[1]);
-            List<Programme> programmes = ProgrammeFiltre.listeEmissionsDate(this.programmes,date);
-            for (Programme p : programmes){
-                p.toString();
-            }
-        }
-        else{
+        catch (ParseException e){
             System.out.println("** Date incorrecte! **");
         }
+        List<Programme> programmes = ProgrammeFiltre.listeEmissionsDate(this.programmes,date);
+        for (Programme p : programmes){
+            System.out.println(p.toString());
+        }
     }
+
+    public void printMoviesPerson(String command){
+        String[] commandTab = command.split("/");
+        System.out.println(commandTab[1]);
+
+        List<Programme> programmes = ProgrammeFiltre.listeFilmActeur(this.programmes,commandTab[1]);
+        for (Programme p : programmes){
+            System.out.println(p.toString());
+        }
+    }
+
+    public void search(String command){
+        String[] commandTab = command.split("/");
+        String[] keyWords = commandTab[1].split(" ");
+
+        List<Programme> programmes = new ArrayList<>();
+        for(String kw : keyWords){
+            programmes.addAll(ProgrammeFiltre.rechercheMotsCles(this.programmes,kw));
+        }
+        for(Programme p : programmes){
+            System.out.println(p.toString());
+        }
+    }
+
 
     public void stop(){
         this.running = false;
@@ -170,7 +198,15 @@ public class Application{
 
                     case 5: a.printCurrentBroadcasts(commandString);break;
 
-                    case 6: a.stop();break;
+                    case 6: a.printMoviesPerson(commandString);break;
+
+                    case 7: break;
+
+                    case 8: break;
+
+                    case 9: a.search(commandString);break;
+
+                    case 10: a.stop();break;
                 }
             }
             else{

@@ -140,16 +140,16 @@ public class ProgrammeFiltre {
      * fonction qui retoune la programmation d'une chaine pour un jour donn�
      * @param ListeProgramme liste de tous les programmes
      * @param date la date voulu
-     * @param Chaine le nom de la chaine (chaine de caract�re)
+     * @param chaine le nom de la chaine (chaine de caract�re)
      * @return ProgrammesFiltres une liste de programmes
      */
-    public static List<Programme> listeProgrammeChaine(List<Programme> ListeProgramme, Date date, String Chaine) {
+    public static List<Programme> listeProgrammeChaine(List<Programme> ListeProgramme, Date date, String chaine) {
 
         List<Programme> ProgrammesFiltres = new ArrayList<>(); //Liste � retourner
                 
         for (Programme UnProgramme : ListeProgramme) {
         	       	
-            if (UnProgramme.getChaine().getNom().equals(Chaine)) {
+            if (UnProgramme.getChaine().getNom().equals(chaine)) {
             	//Si je progamme est sur la chaine voule, on r�cup�re la date de d�but et de fin de tous les ptogramme
             	Date debut = UnProgramme.getDateDeDebut();
             	Date fin = UnProgramme.getDateDeFin();
@@ -266,5 +266,4 @@ public class ProgrammeFiltre {
         }
         return ProgrammesFiltres;
     }
-
-    }
+}
