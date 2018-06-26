@@ -3,6 +3,7 @@ package com.tv.program.tri;
 import com.tv.program.model.Personne;
 import com.tv.program.model.programmes.*;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -132,35 +133,19 @@ public class ProgrammeTrieur {
         return acteursCount;
     }
 
-    //pour la question  c) 3), la deuxième
-    public ProgrammeTypeList emissionByPeriode(List<Programme> programmes, Date dateDeDebut, Date dateDeFin) {
-        ProgrammeTypeList list = new ProgrammeTypeList();
+    /**
+     * Retourne un objet contenant le nombre d'émissions de chaque type par dates qui se situent entre une période donnée
+     * @param programmes la liste de programmes a traiter
+     * @param dateDeDebut la date de début de la période
+     * @param dateDeFin la date de fin de la periode
+     * @return un objet contenant le nombre d'émissions de chaque type par dates qui se situent entre une période donnée
+     */
+    public static ProgrammeCountDailyList emissionByPeriode(List<Programme> programmes, Date dateDeDebut, Date dateDeFin) {
+        ProgrammeCountDailyList list = new ProgrammeCountDailyList(dateDeDebut, dateDeFin);
+
         for (Programme programme : programmes) {
-            if (programme.getDateDeDebut().after(dateDeFin) || programme.getDateDeFin().before(dateDeDebut)) {
-                continue;
-            }
-            if (programme instanceof Autre) {
-                list.autres.add((Autre) programme);
-            } else if (programme instanceof Classique) {
-                list.classiques.add((Classique) programme);
-            } else if (programme instanceof Contemporain) {
-                list.contemporains.add((Contemporain) programme);
-            } else if (programme instanceof Documentaire) {
-                list.documentaires.add((Documentaire) programme);
-            } else if (programme instanceof Emission) {
-                list.emissions.add((Emission) programme);
-            } else if (programme instanceof Film) {
-                list.films.add((Film) programme);
-            } else if (programme instanceof Journal) {
-                list.journals.add((Journal) programme);
-            } else if (programme instanceof Magazine) {
-                list.magazines.add((Magazine) programme);
-            } else if (programme instanceof Musique) {
-                list.musiques.add((Musique) programme);
-            } else if (programme instanceof Serie) {
-                list.series.add((Serie) programme);
-            } else if (programme instanceof Sport) {
-                list.sports.add((Sport) programme);
+            if (programme.getDateDeDebut().compareTo(dateDeDebut) >= 0 && programme.getDateDeFin().compareTo(dateDeFin) <= 0) {
+                list.add(programme);
             }
         }
 

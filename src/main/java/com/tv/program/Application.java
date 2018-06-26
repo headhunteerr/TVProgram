@@ -5,6 +5,7 @@ import com.tv.program.model.Chaine;
 import com.tv.program.model.Personne;
 import com.tv.program.model.programmes.Programme;
 import com.tv.program.parser.ProgrammeLoader;
+import com.tv.program.tri.ProgrammeCountDailyList;
 import com.tv.program.tri.ProgrammeTrieur;
 
 import java.io.BufferedReader;
@@ -179,7 +180,7 @@ public class Application{
             System.out.println("** Date incorrecte! **");
         }
 
-        Object o = ProgrammeTrieur.emissionByPeriode(this.programmes,dateDebut,dateFin);
+        ProgrammeCountDailyList o = ProgrammeTrieur.emissionByPeriode(this.programmes,dateDebut,dateFin);
         System.out.println(o.toString());
     }
 
