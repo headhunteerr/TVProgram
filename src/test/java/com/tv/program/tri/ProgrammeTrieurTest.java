@@ -192,7 +192,7 @@ public class ProgrammeTrieurTest {
         final Personne p1 = new Personne("John Stark", "producer");
         final Personne p2 = new Personne("Einstein", "producer");
         final Personne p3 = new Personne("Moi-meme", "actor");
-        final String film = "film";
+
         final Personne[] personnes = new Personne[] {p1, p2, p3};
         for (Personne personne : personnes) {
             List<Personne> list = new ArrayList<>();
@@ -201,7 +201,7 @@ public class ProgrammeTrieurTest {
             when(programme.getCredits())
                     .thenReturn(list);
             when(programme.getTitre())
-                    .thenReturn(film);
+                    .thenReturn("un film");
             programmes.add(programme);
         }
         Programme programme = mock(Programme.class);
@@ -217,12 +217,12 @@ public class ProgrammeTrieurTest {
         programmes.get(2).getCredits().add(p1);
 
         List<Map.Entry<Personne, Integer>> entries = ProgrammeTrieur
-                .acteursParApparition(programmes, film);
+                .acteursParApparition(programmes);
 
         List<Map.Entry<Personne, Integer>> expected =
-                Arrays.asList(newEntry(p3, 3),
-                        newEntry(p1, 2),
-                        newEntry(p2, 1));
+                Arrays.asList(newEntry(p3, 4),
+                        newEntry(p1, 3),
+                        newEntry(p2, 2));
 
         assertEquals("Should be equal", expected, entries);
 

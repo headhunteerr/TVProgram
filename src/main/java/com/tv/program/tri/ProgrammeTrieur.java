@@ -114,19 +114,16 @@ public class ProgrammeTrieur {
      * un titre de programme donné
      *
      * @param programmes la liste de programmes
-     * @param titre  titre du programme sur lequel filtrer
      * @return retourne une nouvelle liste d'acteurs (key) associé à leurs nombre d'apparition (value)
      * trié par nombre d'apparition (Du plus grand nombre au plus petit)
      */
-    public static List<Map.Entry<Personne, Integer>> acteursParApparition(List<Programme> programmes, String titre) {
+    public static List<Map.Entry<Personne, Integer>> acteursParApparition(List<Programme> programmes) {
         Map<Personne, Integer> acteursMap = new HashMap<>();
 
         for (Programme programme : programmes) {
-            if (programme.getTitre().contains(titre)) {
-                for (Personne personne : programme.getCredits()) {
-                    int count = acteursMap.getOrDefault(personne, 0);
-                    acteursMap.put(personne, count+1);
-                }
+            for (Personne personne : programme.getCredits()) {
+                int count = acteursMap.getOrDefault(personne, 0);
+                acteursMap.put(personne, count+1);
             }
         }
         List<Map.Entry<Personne, Integer>> acteursCount = new ArrayList<>(acteursMap.size());
